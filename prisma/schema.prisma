@@ -1,0 +1,29 @@
+// Prisma schema — Юнивеж «Экспресс-аудит налоговых рисков»
+// Локально: SQLite (file). На VPS при деплое provider меняется на postgresql.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Заявка на полный аудит + снимок результата экспресс-аудита
+model Lead {
+  id             Int      @id @default(autoincrement())
+  createdAt      DateTime @default(now())
+
+  // Контакт (захват лида)
+  name           String
+  phone          String
+  company        String?
+  comment        String?
+
+  // Снимок результата экспресс-аудита
+  overallScore   Int      // 0..100 — общий уровень риска
+  riskLevel      String   // low | medium | high
+  answersJson    String   // JSON: ответы пользователя
+  categoriesJson String   // JSON: баллы и уровни по категориям
+}

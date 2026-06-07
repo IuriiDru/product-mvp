@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* ---- Тема Юнивеж (в стиле лендинга) ---- */
+@theme {
+  --color-paper: #f4eee2;
+  --color-paper-2: #ece3d2;
+  --color-paper-3: #e4d9c4;
+  --color-ink: #15241c;
+  --color-ink-soft: #566256;
+  --color-pine: #173a2a;
+  --color-pine-deep: #0e2a1d;
+  --color-brass: #a9802e;
+  --color-brass-bright: #cca24c;
+  --color-sage: #7b8e7e;
+  --color-cream: #f6f1e6;
+
+  --color-risk-low: #3f7d4e;
+  --color-risk-medium: #c08a2e;
+  --color-risk-high: #9b3527;
+
+  --font-display: var(--font-prata);
+  --font-body: var(--font-golos);
+}
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-golos), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Текстура «бухгалтерской разлинованной бумаги» — позади контента */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 37px,
+    rgba(23, 58, 42, 0.045) 37px,
+    rgba(23, 58, 42, 0.045) 38px
+  );
+  opacity: 0.55;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-prata), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+}
+
+.font-display {
+  font-family: var(--font-prata), Georgia, serif;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-fade-up {
+  animation: fadeUp 0.45s cubic-bezier(0.21, 0.7, 0.25, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    animation: none;
+  }
+}
