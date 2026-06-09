@@ -3,37 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Юнивеж — бухгалтерский аутсорсинг для компаний на ОСНО, НДС и ВЭД</title>
-<meta name="description" content="Берём на себя весь учёт вашей компании на ОСНО: НДС, налог на прибыль и ВЭД. Без ошибок, без доначислений, без блокировок счёта. 15 лет, живые бухгалтеры, персональная команда.">
+<title>Юнивеж — бухгалтерский аутсорсинг и аудит для бизнеса на ОСНО</title>
+<meta name="description" content="Берём на себя весь учёт вашей компании: НДС, налог на прибыль, зарплату, ВЭД — в любой отрасли. Качество работы бухгалтеров контролируют штатные аудиторы. 15 лет, без доначислений, персональная команда.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prata&family=Golos+Text:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#F4EEE2;
-  --paper-2:#ECE3D2;
-  --paper-3:#E4D9C4;
-  --ink:#15241C;
-  --ink-soft:#42514548;
-  --ink-mute:#566256;
-  --pine:#173A2A;
-  --pine-deep:#0E2A1D;
-  --pine-dark:#0A2016;
-  --brass:#A9802E;
-  --brass-bright:#CCA24C;
-  --sage:#7B8E7E;
-  --cream:#F6F1E6;
-  --cream-mute:#C2CBBC;
+  --paper:#ffffff;
+  --paper-2:#f4f7f8;
+  --paper-3:#eaf0f2;
+  --ink:#00212e;
+  --ink-soft:#5b7783;
+  --ink-mute:#557079;
+  --pine:#034a64;
+  --pine-deep:#00212e;
+  --pine-dark:#001722;
+  --brass:#da6334;
+  --brass-bright:#ee7a45;
+  --sage:#6596a6;
+  --cream:#ffffff;
+  --cream-mute:#bcd2da;
   --maxw:1240px;
   --r:18px;
   --ease:cubic-bezier(.21,.7,.25,1);
-  --shadow:0 26px 60px -28px rgba(14,42,29,.45);
-  --shadow-soft:0 14px 40px -22px rgba(14,42,29,.4);
+  --shadow:0 26px 60px -28px rgba(0,33,46,.45);
+  --shadow-soft:0 14px 40px -22px rgba(0,33,46,.4);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  font-family:"Golos Text",sans-serif;
+  font-family:"Inter",sans-serif;
   background:var(--paper);
   color:var(--ink);
   line-height:1.6;
@@ -44,7 +44,7 @@ body{
 /* paper / ledger texture */
 body::before{
   content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 37px,rgba(23,58,42,.045) 37px,rgba(23,58,42,.045) 38px);
+  background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 37px,rgba(3,74,100,.045) 37px,rgba(3,74,100,.045) 38px);
   background-size:100% 38px;opacity:.6;
 }
 /* grain */
@@ -54,7 +54,7 @@ body::after{
 }
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;position:relative;z-index:2}
 section{position:relative;z-index:2}
-h1,h2,h3,.display{font-family:"Prata",serif;font-weight:400;letter-spacing:-.01em;line-height:1.04}
+h1,h2,h3,.display{font-family:"Unbounded",serif;font-weight:600;letter-spacing:-.02em;line-height:1.06}
 a{color:inherit;text-decoration:none}
 .eyebrow{
   font-size:12.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
@@ -62,10 +62,12 @@ a{color:inherit;text-decoration:none}
 }
 .eyebrow::before{content:"";width:34px;height:1px;background:var(--brass);opacity:.7}
 .lead{font-size:clamp(17px,1.4vw,19px);color:var(--ink-mute);max-width:60ch}
+.ind{border:1px solid rgba(3,74,100,.22);border-radius:100px;padding:7px 15px;font-size:14px;font-weight:500;color:var(--ink-mute);background:var(--paper-2);transition:all .3s var(--ease)}
+.ind:hover{border-color:var(--brass);color:var(--ink)}
 
 /* ---------- buttons ---------- */
 .btn{
-  display:inline-flex;align-items:center;gap:11px;font-family:"Golos Text";font-weight:600;
+  display:inline-flex;align-items:center;gap:11px;font-family:"Inter";font-weight:600;
   font-size:15.5px;padding:16px 30px;border-radius:100px;cursor:pointer;border:1px solid transparent;
   transition:transform .4s var(--ease),box-shadow .4s var(--ease),background .3s,color .3s;
   position:relative;overflow:hidden;white-space:nowrap;
@@ -73,27 +75,27 @@ a{color:inherit;text-decoration:none}
 .btn .arw{transition:transform .4s var(--ease)}
 .btn:hover .arw{transform:translateX(5px)}
 .btn-primary{background:var(--pine);color:var(--cream);box-shadow:var(--shadow-soft)}
-.btn-primary::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(204,162,76,.35) 50%,transparent 70%);transform:translateX(-130%);transition:transform .8s var(--ease)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 22px 44px -18px rgba(14,42,29,.6)}
+.btn-primary::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(218,99,52,.35) 50%,transparent 70%);transform:translateX(-130%);transition:transform .8s var(--ease)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 22px 44px -18px rgba(0,33,46,.6)}
 .btn-primary:hover::after{transform:translateX(130%)}
-.btn-ghost{background:transparent;color:var(--ink);border-color:rgba(23,58,42,.28)}
-.btn-ghost:hover{border-color:var(--pine);transform:translateY(-3px);background:rgba(23,58,42,.04)}
-.btn-brass{background:linear-gradient(135deg,var(--brass-bright),var(--brass));color:#2A1E05;box-shadow:0 16px 36px -16px rgba(169,128,46,.7)}
-.btn-brass:hover{transform:translateY(-3px);box-shadow:0 22px 48px -16px rgba(169,128,46,.85)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:rgba(3,74,100,.28)}
+.btn-ghost:hover{border-color:var(--pine);transform:translateY(-3px);background:rgba(3,74,100,.04)}
+.btn-brass{background:linear-gradient(135deg,var(--brass-bright),var(--brass));color:#ffffff;box-shadow:0 16px 36px -16px rgba(218,99,52,.7)}
+.btn-brass:hover{transform:translateY(-3px);box-shadow:0 22px 48px -16px rgba(218,99,52,.85)}
 .btn-lg{padding:19px 38px;font-size:16.5px}
 
 /* ---------- header ---------- */
 header{position:fixed;top:0;left:0;right:0;z-index:50;transition:all .45s var(--ease)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;transition:padding .4s var(--ease)}
-header.scrolled{background:rgba(244,238,226,.82);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(23,58,42,.1)}
+header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(3,74,100,.1)}
 header.scrolled .nav{padding:13px 0}
 .brand{display:flex;align-items:center;gap:13px}
 .brand .mark{
   width:42px;height:42px;border-radius:50%;border:1.5px solid var(--brass);
-  display:grid;place-items:center;font-family:"Prata";font-size:22px;color:var(--pine);
-  background:radial-gradient(circle at 30% 25%,#fff8ec,var(--paper));flex:none;
+  display:grid;place-items:center;font-family:"Unbounded";font-size:22px;color:var(--pine);
+  background:radial-gradient(circle at 30% 25%,#eef3f5,var(--paper));flex:none;
 }
-.brand b{font-family:"Prata";font-weight:400;font-size:23px;letter-spacing:.04em;line-height:1}
+.brand b{font-family:"Unbounded";font-weight:400;font-size:23px;letter-spacing:.04em;line-height:1}
 .brand small{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);margin-top:3px;font-weight:500}
 .navlinks{display:flex;align-items:center;gap:34px}
 .navlinks a{font-size:15px;font-weight:500;color:var(--ink);position:relative;padding:4px 0}
@@ -106,51 +108,51 @@ header.scrolled .nav{padding:13px 0}
 /* ---------- hero ---------- */
 .hero{padding:170px 0 90px;position:relative}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
-.hero h1{font-size:clamp(40px,6vw,76px);margin:26px 0 0}
-.hero h1 .accent{color:var(--brass);font-style:italic}
+.hero h1{font-size:clamp(32px,5vw,58px);margin:26px 0 0}
+.hero h1 .accent{color:var(--brass)}
 .hero .lead{margin:26px 0 36px;font-size:clamp(17px,1.5vw,20px);line-height:1.6}
 .hero-cta{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
 .hero-note{margin-top:26px;font-size:14px;color:var(--ink-mute);display:flex;align-items:center;gap:10px}
-.hero-note .dot{width:7px;height:7px;border-radius:50%;background:var(--brass);box-shadow:0 0 0 4px rgba(169,128,46,.18)}
+.hero-note .dot{width:7px;height:7px;border-radius:50%;background:var(--brass);box-shadow:0 0 0 4px rgba(218,99,52,.18)}
 
 /* hero seal */
 .hero-visual{position:relative;display:grid;place-items:center;min-height:380px}
 .seal{width:min(360px,80%);aspect-ratio:1;position:relative;animation:floaty 7s ease-in-out infinite}
 .seal .ring{position:absolute;inset:0;animation:spin 38s linear infinite}
 .seal svg{width:100%;height:100%}
-.seal .ring text{fill:var(--pine);font-family:"Golos Text";font-size:8.4px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.seal .ring text{fill:var(--pine);font-family:"Inter";font-size:8.4px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
 .seal .core{
   position:absolute;inset:21%;border-radius:50%;border:1.5px solid var(--brass);
-  background:radial-gradient(circle at 35% 28%,#fff8ec,var(--paper-2));
-  display:grid;place-items:center;text-align:center;box-shadow:inset 0 0 28px rgba(169,128,46,.15),var(--shadow-soft);
+  background:radial-gradient(circle at 35% 28%,#eef3f5,var(--paper-2));
+  display:grid;place-items:center;text-align:center;box-shadow:inset 0 0 28px rgba(218,99,52,.15),var(--shadow-soft);
 }
-.seal .core .zero{font-family:"Prata";font-size:74px;color:var(--pine);line-height:.9}
+.seal .core .zero{font-family:"Unbounded";font-size:74px;color:var(--pine);line-height:.9}
 .seal .core span{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-top:4px}
-.seal .stamp{position:absolute;top:6%;right:2%;background:var(--brass);color:#2A1E05;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 13px;border-radius:6px;transform:rotate(8deg);box-shadow:var(--shadow-soft)}
+.seal .stamp{position:absolute;top:6%;right:2%;background:var(--brass);color:#ffffff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 13px;border-radius:6px;transform:rotate(8deg);box-shadow:var(--shadow-soft)}
 
 /* stat strip */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:78px;border-top:1px solid rgba(23,58,42,.15);border-bottom:1px solid rgba(23,58,42,.15)}
-.stat{padding:30px 28px;border-left:1px solid rgba(23,58,42,.12)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:78px;border-top:1px solid rgba(3,74,100,.15);border-bottom:1px solid rgba(3,74,100,.15)}
+.stat{padding:30px 28px;border-left:1px solid rgba(3,74,100,.12)}
 .stat:first-child{border-left:none}
-.stat .num{font-family:"Prata";font-size:clamp(44px,5vw,62px);color:var(--pine);line-height:1;display:flex;align-items:baseline;gap:6px}
+.stat .num{font-family:"Unbounded";font-size:clamp(44px,5vw,62px);color:var(--pine);line-height:1;display:flex;align-items:baseline;gap:6px}
 .stat .num small{font-size:24px;color:var(--brass)}
 .stat .lbl{margin-top:10px;font-size:14.5px;color:var(--ink-mute);max-width:24ch}
 
 /* ---------- generic section heading ---------- */
 .sec{padding:108px 0}
 .sec-head{max-width:760px;margin-bottom:54px}
-.sec-head h2{font-size:clamp(31px,4vw,52px);margin:20px 0 0}
+.sec-head h2{font-size:clamp(26px,3.4vw,42px);margin:20px 0 0}
 .sec-head .lead{margin-top:22px}
 
 /* core capabilities list */
 .cap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .cap-list{list-style:none;display:flex;flex-direction:column;gap:2px}
-.cap-list li{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid rgba(23,58,42,.12);align-items:flex-start;transition:padding-left .4s var(--ease)}
+.cap-list li{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid rgba(3,74,100,.12);align-items:flex-start;transition:padding-left .4s var(--ease)}
 .cap-list li:hover{padding-left:10px}
-.cap-list .ix{font-family:"Prata";font-size:18px;color:var(--brass);flex:none;width:34px}
+.cap-list .ix{font-family:"Unbounded";font-size:18px;color:var(--brass);flex:none;width:34px}
 .cap-cta{margin-top:34px}
 .cap-aside{background:var(--pine);color:var(--cream);border-radius:var(--r);padding:42px;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.cap-aside::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;border:1px solid rgba(204,162,76,.3)}
+.cap-aside::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;border-radius:50%;border:1px solid rgba(218,99,52,.3)}
 .cap-aside h3{font-size:27px;margin-bottom:18px;color:var(--cream)}
 .cap-aside p{color:var(--cream-mute);font-size:15.5px}
 .cap-aside .mini{margin-top:28px;display:flex;flex-direction:column;gap:16px}
@@ -159,30 +161,30 @@ header.scrolled .nav{padding:13px 0}
 
 /* value cards */
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.card{background:var(--paper-2);border:1px solid rgba(23,58,42,.1);border-radius:var(--r);padding:32px 28px;transition:transform .5s var(--ease),box-shadow .5s var(--ease),background .5s}
+.card{background:var(--paper-2);border:1px solid rgba(3,74,100,.1);border-radius:var(--r);padding:32px 28px;transition:transform .5s var(--ease),box-shadow .5s var(--ease),background .5s}
 .card:hover{transform:translateY(-8px);box-shadow:var(--shadow);background:var(--cream)}
-.card .ix{font-family:"Prata";font-size:30px;color:var(--brass);display:block;margin-bottom:18px}
-.card h3{font-family:"Golos Text";font-weight:700;font-size:18px;margin-bottom:12px;line-height:1.25}
+.card .ix{font-family:"Unbounded";font-size:30px;color:var(--brass);display:block;margin-bottom:18px}
+.card h3{font-family:"Inter";font-weight:700;font-size:18px;margin-bottom:12px;line-height:1.25}
 .card p{font-size:15px;color:var(--ink-mute)}
 
 /* dark recognise section */
 .dark{background:var(--pine-deep);color:var(--cream);overflow:hidden}
-.dark::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent 0,transparent 37px,rgba(204,162,76,.05) 37px,rgba(204,162,76,.05) 38px);pointer-events:none}
+.dark::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent 0,transparent 37px,rgba(218,99,52,.05) 37px,rgba(218,99,52,.05) 38px);pointer-events:none}
 .dark .eyebrow{color:var(--brass-bright)}
 .dark .eyebrow::before{background:var(--brass-bright)}
 .dark h2{color:var(--cream)}
-.recognise h2 em{color:var(--brass-bright);font-style:italic}
+.recognise h2 em{color:var(--brass-bright)}
 .pains{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 40px;margin-top:50px}
-.pain{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-top:1px solid rgba(246,241,230,.14)}
-.pain .q{font-family:"Prata";color:var(--brass-bright);font-size:22px;line-height:1;flex:none}
-.pain p{color:#DCE4D6;font-size:16.5px}
+.pain{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-top:1px solid rgba(255,255,255,.14)}
+.pain .q{font-family:"Unbounded";color:var(--brass-bright);font-size:22px;line-height:1;flex:none}
+.pain p{color:#cfe1e7;font-size:16.5px}
 
 /* how we solve */
 .solve{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
 .solve-col{background:var(--paper-2);border-radius:var(--r);padding:36px 32px;border-top:3px solid var(--brass);box-shadow:var(--shadow-soft);transition:transform .5s var(--ease)}
 .solve-col:hover{transform:translateY(-6px)}
 .solve-col .tag{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
-.solve-col h3{font-family:"Golos Text";font-weight:800;font-size:21px;margin:12px 0 22px;line-height:1.2}
+.solve-col h3{font-family:"Inter";font-weight:800;font-size:21px;margin:12px 0 22px;line-height:1.2}
 .solve-col ul{list-style:none;display:flex;flex-direction:column;gap:18px}
 .solve-col li{font-size:15px;padding-left:26px;position:relative;color:var(--ink)}
 .solve-col li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border:1.5px solid var(--brass);transform:rotate(45deg)}
@@ -194,18 +196,18 @@ header.scrolled .nav{padding:13px 0}
 .out-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
 .out-feel{display:flex;flex-direction:column;gap:24px}
 .out-feel .item{display:flex;gap:18px;align-items:flex-start}
-.out-feel .em{font-family:"Prata";font-size:30px;color:var(--brass);line-height:1;flex:none;width:48px}
-.out-feel .item b{font-family:"Golos Text";font-weight:700;font-size:18px}
+.out-feel .em{font-family:"Unbounded";font-size:30px;color:var(--brass);line-height:1;flex:none;width:48px}
+.out-feel .item b{font-family:"Inter";font-weight:700;font-size:18px}
 .out-feel .item p{color:var(--ink-mute);font-size:15px}
 .out-goals{background:var(--pine);color:var(--cream);border-radius:var(--r);padding:46px;align-self:start;box-shadow:var(--shadow)}
 .out-goals h3{color:var(--cream);font-size:26px;margin-bottom:26px}
 .out-goals ul{list-style:none;display:flex;flex-direction:column;gap:20px}
-.out-goals li{display:flex;gap:14px;font-size:16.5px;color:#E7EEE2;align-items:flex-start}
+.out-goals li{display:flex;gap:14px;font-size:16.5px;color:#dceaef;align-items:flex-start}
 .out-goals li .ck{color:var(--brass-bright);font-size:20px;flex:none;line-height:1.2}
 
 /* doubts accordion */
 .doubts-list{display:flex;flex-direction:column;gap:14px;max-width:880px}
-details{background:var(--paper-2);border:1px solid rgba(23,58,42,.12);border-radius:14px;overflow:hidden;transition:background .3s}
+details{background:var(--paper-2);border:1px solid rgba(3,74,100,.12);border-radius:14px;overflow:hidden;transition:background .3s}
 details[open]{background:var(--cream);box-shadow:var(--shadow-soft)}
 summary{list-style:none;cursor:pointer;padding:24px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px;font-weight:600;font-size:18px}
 summary::-webkit-details-marker{display:none}
@@ -215,49 +217,49 @@ details .body{padding:0 28px 26px;color:var(--ink-mute);font-size:16px;max-width
 
 /* competitors */
 .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.comp{background:var(--paper-2);border-radius:var(--r);padding:34px 30px;position:relative;border:1px solid rgba(23,58,42,.1);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.comp{background:var(--paper-2);border-radius:var(--r);padding:34px 30px;position:relative;border:1px solid rgba(3,74,100,.1);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
 .comp:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
 .comp .fired{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A2E22;background:rgba(138,46,34,.1);padding:6px 12px;border-radius:100px;margin-bottom:18px}
-.comp h3{font-family:"Golos Text";font-weight:700;font-size:19px;margin-bottom:14px}
+.comp h3{font-family:"Inter";font-weight:700;font-size:19px;margin-bottom:14px}
 .comp p{font-size:15px;color:var(--ink-mute)}
-.comp .vs{position:absolute;top:28px;right:28px;font-family:"Prata";font-size:30px;color:rgba(23,58,42,.12)}
+.comp .vs{position:absolute;top:28px;right:28px;font-family:"Unbounded";font-size:30px;color:rgba(3,74,100,.12)}
 
 /* final CTA + form */
 .final{background:var(--pine-deep);color:var(--cream);overflow:hidden}
-.final::after{content:"";position:absolute;bottom:-120px;left:-80px;width:340px;height:340px;border-radius:50%;border:1px solid rgba(204,162,76,.18)}
+.final::after{content:"";position:absolute;bottom:-120px;left:-80px;width:340px;height:340px;border-radius:50%;border:1px solid rgba(218,99,52,.18)}
 .final-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .final h2{color:var(--cream);font-size:clamp(32px,4.2vw,52px)}
 .final .lead{color:var(--cream-mute);margin-top:22px}
 .final .assure{margin-top:30px;display:flex;flex-direction:column;gap:14px}
-.final .assure div{display:flex;gap:12px;align-items:center;font-size:15.5px;color:#DCE4D6}
+.final .assure div{display:flex;gap:12px;align-items:center;font-size:15.5px;color:#cfe1e7}
 .final .assure .ck{color:var(--brass-bright);font-weight:700}
 .form{background:var(--cream);color:var(--ink);border-radius:22px;padding:42px;box-shadow:var(--shadow)}
-.form h3{font-family:"Prata";font-size:26px;margin-bottom:8px}
+.form h3{font-family:"Unbounded";font-size:26px;margin-bottom:8px}
 .form .sub{font-size:14.5px;color:var(--ink-mute);margin-bottom:26px}
 .field{margin-bottom:18px}
 .field label{display:block;font-size:13px;font-weight:600;letter-spacing:.04em;margin-bottom:8px;color:var(--ink)}
 .field input,.field textarea{
-  width:100%;padding:15px 18px;border:1px solid rgba(23,58,42,.2);border-radius:12px;background:var(--paper);
-  font-family:"Golos Text";font-size:15.5px;color:var(--ink);transition:border .3s,box-shadow .3s;
+  width:100%;padding:15px 18px;border:1px solid rgba(3,74,100,.2);border-radius:12px;background:var(--paper);
+  font-family:"Inter";font-size:15.5px;color:var(--ink);transition:border .3s,box-shadow .3s;
 }
-.field input:focus,.field textarea:focus{outline:none;border-color:var(--brass);box-shadow:0 0 0 4px rgba(169,128,46,.15)}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--brass);box-shadow:0 0 0 4px rgba(218,99,52,.15)}
 .form .btn{width:100%;justify-content:center;margin-top:6px}
 .form .consent{font-size:12px;color:var(--ink-mute);margin-top:16px;text-align:center}
 .form-done{text-align:center;padding:30px 10px;display:none}
 .form-done.show{display:block;animation:fadeUp .6s var(--ease)}
-.form-done .big{font-family:"Prata";font-size:46px;color:var(--pine)}
+.form-done .big{font-family:"Unbounded";font-size:46px;color:var(--pine)}
 .form-done h3{margin:14px 0 10px}
 
 /* footer */
 footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
-.foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:36px;border-bottom:1px solid rgba(246,241,230,.12)}
+.foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
 .foot-top .brand b{color:var(--cream)}
 .foot-top .brand small{color:var(--cream-mute)}
 .foot-cols{display:flex;gap:70px;flex-wrap:wrap}
 .foot-col h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-bright);margin-bottom:16px;font-weight:600}
 .foot-col a,.foot-col p{display:block;font-size:15px;color:var(--cream-mute);margin-bottom:10px;transition:color .3s}
 .foot-col a:hover{color:var(--cream)}
-.foot-bottom{margin-top:30px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:rgba(194,203,188,.6)}
+.foot-bottom{margin-top:30px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:rgba(188,210,218,.6)}
 
 /* reveal */
 [data-reveal]{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
@@ -293,7 +295,7 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
 @media(max-width:560px){
   .wrap{padding:0 20px}
   .stats{grid-template-columns:1fr}
-  .stat{border-left:none;border-top:1px solid rgba(23,58,42,.12)}
+  .stat{border-left:none;border-top:1px solid rgba(3,74,100,.12)}
   .stat:first-child{border-top:none}
   .cards{grid-template-columns:1fr}
   .sec{padding:72px 0}
@@ -318,8 +320,8 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
     </a>
     <nav class="navlinks" id="nav">
       <a href="#services">Что мы ведём</a>
+      <a href="#advantages">Преимущества</a>
       <a href="#how">Как работаем</a>
-      <a href="#why">Почему мы</a>
       <a href="/pricing">Стоимость</a>
       <a href="#faq">Сомнения</a>
     </nav>
@@ -335,9 +337,9 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">ОСНО · НДС · ВЭД · аутсорсинг</span>
+        <span class="eyebrow">Бухгалтерия · аудит · налоги · с 2011 года</span>
         <h1>Бухгалтерия, после&nbsp;которой <span class="accent">спишь спокойно</span></h1>
-        <p class="lead">Берём на себя весь учёт вашей компании на ОСНО — НДС, налог на прибыль и&nbsp;ВЭД. Без ошибок, без доначислений, без блокировок счёта. 15&nbsp;лет, живые бухгалтеры, персональная команда под ваш бизнес.</p>
+        <p class="lead">Берём на себя весь учёт вашей компании — НДС, налог на прибыль, зарплату и&nbsp;ВЭД, в любой отрасли: торговля, производство, услуги. Без ошибок и доначислений. А качество работы бухгалтеров контролируют наши штатные&nbsp;аудиторы.</p>
         <div class="hero-cta">
           <a href="/audit" class="btn btn-primary btn-lg">Получить бесплатный аудит <span class="arw">→</span></a>
           <a href="/pricing" class="btn btn-ghost btn-lg">Рассчитать стоимость <span class="arw">→</span></a>
@@ -374,8 +376,18 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow">Что мы ведём</span>
-      <h2>Ваш НДС, прибыль и ВЭД — посчитаны без единой ошибки</h2>
-      <p class="lead">Берём всю бухгалтерию вашей компании на ОСНО на себя — за счёт персональной команды бухгалтеров, которые годами ведут именно сложный учёт с НДС и внешнеэкономической деятельностью.</p>
+      <h2>Весь ваш учёт — посчитан без единой ошибки</h2>
+      <p class="lead">Берём всю бухгалтерию вашей компании на себя. Сложный учёт на ОСНО с НДС — наш профиль, но мы одинаково уверенно ведём торговлю, производство, услуги, ВЭД и любую другую сферу.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
+        <span class="ind">Оптовая торговля</span>
+        <span class="ind">Производство</span>
+        <span class="ind">Услуги и консалтинг</span>
+        <span class="ind">ВЭД</span>
+        <span class="ind">Строительство</span>
+        <span class="ind">Общепит</span>
+        <span class="ind">Медицина</span>
+        <span class="ind">IT</span>
+      </div>
     </div>
     <div class="cap">
       <div data-reveal>
@@ -413,6 +425,35 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
       <div class="card" data-reveal data-d="2"><span class="ix">02</span><h3>Проверки ФНС</h3><p>Подготовленные ответы на требования и сопровождение камералок: ноль доначислений как стандарт.</p></div>
       <div class="card" data-reveal data-d="3"><span class="ix">03</span><h3>ВЭД</h3><p>Чистый валютный контроль и таможенный НДС — без штрафов за нарушение валютного законодательства.</p></div>
       <div class="card" data-reveal data-d="4"><span class="ix">04</span><h3>Управление</h3><p>Понятные цифры по прибыли и налоговой нагрузке, чтобы принимать решения, а не гадать.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section class="sec" id="advantages" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">Чем мы отличаемся</span>
+      <h2>Не просто бухгалтеры — аудиторская компания с сильной командой</h2>
+      <p class="lead">Два принципа, которые отличают Юнивеж от обычного аутсорсинга и одиночных бухгалтеров.</p>
+    </div>
+    <div class="out-grid">
+      <aside class="cap-aside" data-reveal>
+        <h3>Аудиторы проверяют бухгалтеров</h3>
+        <p>Юнивеж — не только бухгалтерская, но и аудиторская компания. В штате работают аттестованные аудиторы.</p>
+        <div class="mini">
+          <div><span class="ck">✓</span><span>Аудиторы контролируют качество работы — не только сторонних бухгалтеров, но и <b>наших собственных</b></span></div>
+          <div><span class="ck">✓</span><span>Двойной контроль — это <b>меньше ошибок и налоговых рисков</b> в вашем учёте, чего не даст один бухгалтер</span></div>
+        </div>
+      </aside>
+      <aside class="cap-aside" data-reveal data-d="1">
+        <h3>Сила сообщества, а не один человек</h3>
+        <p>Ваш учёт ведёт не одиночка, а команда с общей экспертизой и взаимной подстраховкой.</p>
+        <div class="mini">
+          <div><span class="ck">✓</span><span>Внутри компании — живое профессиональное сообщество: бухгалтеры <b>советуются, проверяют и помогают друг другу</b></span></div>
+          <div><span class="ck">✓</span><span>Изменения законодательства мы разбираем <b>сообща и быстро</b> — ваш учёт всегда по актуальным правилам</span></div>
+        </div>
+      </aside>
     </div>
   </div>
 </section>
@@ -455,11 +496,11 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
       </div>
       <div class="solve-col" data-reveal data-d="2">
         <span class="tag">Core Job</span>
-        <h3>ВЭД и валютный контроль</h3>
+        <h3>Зарплата, кадры и ВЭД</h3>
         <ul>
-          <li><b>Ведём валютные операции и контракты</b><span>нет нарушений валютного законодательства</span></li>
-          <li><b>Считаем таможенный НДС и вычет</b><span>деньги не зависают и не теряются</span></li>
-          <li><b>Готовим документы для банка и таможни</b><span>сделки проходят гладко, без стопов</span></li>
+          <li><b>Считаем зарплату, взносы и НДФЛ</b><span>сотрудники и налоговая довольны, без просрочек</span></li>
+          <li><b>Ведём кадровый учёт и отчётность</b><span>отчёты в СФР и ФНС — вовремя и без ошибок</span></li>
+          <li><b>Закрываем ВЭД и валютный контроль</b><span>сделки проходят гладко, без нарушений</span></li>
         </ul>
       </div>
       <div class="solve-col" data-reveal data-d="3">
@@ -536,8 +577,8 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
       <h2>Кого мы увольняем за вас</h2>
     </div>
     <div class="comp-grid">
-      <div class="comp" data-reveal data-d="1"><span class="vs">01</span><span class="fired">увольняем</span><h3>Штатного бухгалтера</h3><p>Одна голова, которая может уволиться, заболеть или ошибиться, плюс налоги на его ФОТ. Мы — команда с подстраховкой и экспертизой по всему спектру ОСНО+ВЭД, без рисков «человеческого фактора».</p></div>
-      <div class="comp" data-reveal data-d="2"><span class="vs">02</span><span class="fired">увольняем</span><h3>Дешёвые онлайн-сервисы</h3><p>Шаблонный самообслуживающий учёт, который не тянет сложный ОСНО с НДС и ВЭД. Мы даём живого бухгалтера, который погружается в ваш бизнес, а не тикет-систему.</p></div>
+      <div class="comp" data-reveal data-d="1"><span class="vs">01</span><span class="fired">увольняем</span><h3>Штатного бухгалтера</h3><p>Одна голова, которая может уволиться, заболеть или ошибиться, плюс налоги на его ФОТ. Мы — команда с подстраховкой и аудиторским контролем качества, без рисков «человеческого фактора».</p></div>
+      <div class="comp" data-reveal data-d="2"><span class="vs">02</span><span class="fired">увольняем</span><h3>Дешёвые онлайн-сервисы</h3><p>Шаблонный самообслуживающий учёт, который не тянет сложный учёт на ОСНО. Мы даём живого бухгалтера, который погружается в ваш бизнес, а не тикет-систему.</p></div>
       <div class="comp" data-reveal data-d="3"><span class="vs">03</span><span class="fired">увольняем</span><h3>Фрилансера и дешёвую фирму</h3><p>Экономия, за которой стоит цена ошибки на ОСНО. У нас за результат отвечает компания с 15-летней репутацией, а не один человек без гарантий.</p></div>
     </div>
   </div>
@@ -552,7 +593,7 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
         <h2>Узнайте свои налоговые риски — до того, как их найдёт ФНС</h2>
         <p class="lead">Оставьте заявку — персональный бухгалтер за 3 дня проведёт экспресс-аудит вашей бухгалтерии и покажет риски и точки роста по НДС. Бесплатно и без обязательств.</p>
         <div class="assure">
-          <div><span class="ck">✓</span> Профильная экспертиза по ОСНО, НДС и ВЭД</div>
+          <div><span class="ck">✓</span> Аудиторы контролируют качество работы бухгалтеров</div>
           <div><span class="ck">✓</span> Перевод от текущего бухгалтера берём на себя</div>
           <div><span class="ck">✓</span> 15 лет на рынке · ноль доначислений как стандарт</div>
         </div>
