@@ -15,6 +15,9 @@ model Lead {
   id             Int      @id @default(autoincrement())
   createdAt      DateTime @default(now())
 
+  // Тип анкеты: "audit" — экспресс-аудит рисков, "pricing" — расчёт стоимости услуг
+  kind           String   @default("audit")
+
   // Контакт (захват лида)
   name           String
   phone          String

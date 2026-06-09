@@ -45,7 +45,7 @@ export default async function AdminPage() {
                     <th className="px-5 py-4 font-semibold">Имя</th>
                     <th className="px-5 py-4 font-semibold">Телефон</th>
                     <th className="px-5 py-4 font-semibold">Компания</th>
-                    <th className="px-5 py-4 font-semibold">Риск</th>
+                    <th className="px-5 py-4 font-semibold">Тип / Риск</th>
                     <th className="px-5 py-4 font-semibold">Комментарий</th>
                   </tr>
                 </thead>
@@ -67,11 +67,17 @@ export default async function AdminPage() {
                         <td className="whitespace-nowrap px-5 py-4">{lead.phone}</td>
                         <td className="px-5 py-4">{lead.company || "—"}</td>
                         <td className="whitespace-nowrap px-5 py-4">
-                          <span
-                            className={`rounded-full px-3 py-1 text-xs font-semibold ${levelBadge[level]}`}
-                          >
-                            {LEVEL_LABEL[level]} · {lead.overallScore}
-                          </span>
+                          {lead.kind === "pricing" ? (
+                            <span className="rounded-full bg-brass/15 px-3 py-1 text-xs font-semibold text-brass">
+                              Расчёт стоимости
+                            </span>
+                          ) : (
+                            <span
+                              className={`rounded-full px-3 py-1 text-xs font-semibold ${levelBadge[level]}`}
+                            >
+                              {LEVEL_LABEL[level]} · {lead.overallScore}
+                            </span>
+                          )}
                         </td>
                         <td className="max-w-xs px-5 py-4 text-ink-soft">
                           {lead.comment || "—"}
