@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Юнивеж — бухгалтерский аутсорсинг и аудит для бизнеса на ОСНО</title>
-<meta name="description" content="Берём на себя весь учёт вашей компании: НДС, налог на прибыль, зарплату, ВЭД — в любой отрасли. Качество работы бухгалтеров контролируют штатные аудиторы. 15 лет, без доначислений, персональная команда.">
+<title>Юнивеж — бухгалтерия, которая видит за цифрами реальный бизнес</title>
+<meta name="description" content="Бухгалтерия, которая объясняет ваши цифры: реальная прибыль, реальные долги, риски. Думающие бухгалтеры под контролем аудиторов и налоговых юристов. 15 лет, 25 компаний, нулевой отток клиентов.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#ffffff;
-  --paper-2:#f4f7f8;
-  --paper-3:#eaf0f2;
+  --paper:#f3ece0;
+  --paper-2:#fbf7f0;
+  --paper-3:#ebe3d6;
   --ink:#00212e;
   --ink-soft:#5b7783;
   --ink-mute:#557079;
@@ -22,7 +22,7 @@
   --brass:#da6334;
   --brass-bright:#ee7a45;
   --sage:#6596a6;
-  --cream:#ffffff;
+  --cream:#fbf7f0;
   --cream-mute:#bcd2da;
   --maxw:1240px;
   --r:18px;
@@ -87,13 +87,13 @@ a{color:inherit;text-decoration:none}
 /* ---------- header ---------- */
 header{position:fixed;top:0;left:0;right:0;z-index:50;transition:all .45s var(--ease)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;transition:padding .4s var(--ease)}
-header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(3,74,100,.1)}
+header.scrolled{background:rgba(243,236,224,.85);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(3,74,100,.1)}
 header.scrolled .nav{padding:13px 0}
 .brand{display:flex;align-items:center;gap:13px}
 .brand .mark{
   width:42px;height:42px;border-radius:50%;border:1.5px solid var(--brass);
   display:grid;place-items:center;font-family:"Unbounded";font-size:22px;color:var(--pine);
-  background:radial-gradient(circle at 30% 25%,#eef3f5,var(--paper));flex:none;
+  background:radial-gradient(circle at 30% 25%,#fffdf6,var(--paper));flex:none;
 }
 .brand b{font-family:"Unbounded";font-weight:400;font-size:23px;letter-spacing:.04em;line-height:1}
 .brand small{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);margin-top:3px;font-weight:500}
@@ -123,7 +123,7 @@ header.scrolled .nav{padding:13px 0}
 .seal .ring text{fill:var(--pine);font-family:"Inter";font-size:8.4px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
 .seal .core{
   position:absolute;inset:21%;border-radius:50%;border:1.5px solid var(--brass);
-  background:radial-gradient(circle at 35% 28%,#eef3f5,var(--paper-2));
+  background:radial-gradient(circle at 35% 28%,#fffdf6,var(--paper-2));
   display:grid;place-items:center;text-align:center;box-shadow:inset 0 0 28px rgba(218,99,52,.15),var(--shadow-soft);
 }
 .seal .core .zero{font-family:"Unbounded";font-size:74px;color:var(--pine);line-height:.9}
@@ -337,14 +337,14 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">Бухгалтерия · аудит · налоги · с 2011 года</span>
-        <h1>Бухгалтерия, после&nbsp;которой <span class="accent">спишь спокойно</span></h1>
-        <p class="lead">Берём на себя весь учёт вашей компании — НДС, налог на прибыль, зарплату и&nbsp;ВЭД, в любой отрасли: торговля, производство, услуги. Без ошибок и доначислений. А качество работы бухгалтеров контролируют наши штатные&nbsp;аудиторы.</p>
+        <span class="eyebrow">Бухгалтерия · аудит · налоговый консалтинг</span>
+        <h1>Бухгалтерия, которая видит за&nbsp;цифрами <span class="accent">реальный бизнес</span></h1>
+        <p class="lead">Не «программа так посчитала» — а «давайте объясним, где ваша прибыль, какие у вас реальные долги и какие риски, и обсудим, что можно улучшить». Учёт ведут думающие бухгалтеры под контролем аудиторов: за 15&nbsp;лет аудита мы видели рынок бухгалтеров в деле и собрали лучших.</p>
         <div class="hero-cta">
           <a href="/audit" class="btn btn-primary btn-lg">Получить бесплатный аудит <span class="arw">→</span></a>
           <a href="/pricing" class="btn btn-ghost btn-lg">Рассчитать стоимость <span class="arw">→</span></a>
         </div>
-        <div class="hero-note"><span class="dot"></span> За 3 дня покажем ваши налоговые риски и упущенный НДС к вычету</div>
+        <div class="hero-note"><span class="dot"></span> За пару минут покажем карту рисков, за 3 дня — реальную картину вашего учёта</div>
       </div>
       <div class="hero-visual">
         <div class="seal" aria-hidden="true">
@@ -364,9 +364,9 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
     </div>
 
     <div class="stats">
-      <div class="stat" data-reveal data-d="1"><div class="num">15<small>лет</small></div><div class="lbl">ведём бухгалтерию малого и среднего бизнеса</div></div>
-      <div class="stat" data-reveal data-d="2"><div class="num">0</div><div class="lbl">штрафов и доначислений — как стандарт работы</div></div>
-      <div class="stat" data-reveal data-d="3"><div class="num">3<small>дня</small></div><div class="lbl">на бесплатный экспресс-аудит вашего учёта</div></div>
+      <div class="stat" data-reveal data-d="1"><div class="num">15<small>лет</small></div><div class="lbl">проводим аудит и ведём бухгалтерию бизнеса</div></div>
+      <div class="stat" data-reveal data-d="2"><div class="num">25</div><div class="lbl">компаний на постоянном бухгалтерском обслуживании</div></div>
+      <div class="stat" data-reveal data-d="3"><div class="num">15</div><div class="lbl">бухгалтеров — отобраны за годы аудита, под контролем аудиторов</div></div>
     </div>
   </div>
 </section>
@@ -376,37 +376,38 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow">Что мы ведём</span>
-      <h2>Весь ваш учёт — посчитан без единой ошибки</h2>
+      <h2>Весь учёт — и понятная картина вашего бизнеса</h2>
       <p class="lead">Берём всю бухгалтерию вашей компании на себя. Сложный учёт на ОСНО с НДС — наш профиль, но мы одинаково уверенно ведём торговлю, производство, услуги, ВЭД и любую другую сферу.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
-        <span class="ind">Оптовая торговля</span>
-        <span class="ind">Производство</span>
-        <span class="ind">Услуги и консалтинг</span>
-        <span class="ind">ВЭД</span>
-        <span class="ind">Строительство</span>
-        <span class="ind">Общепит</span>
-        <span class="ind">Медицина</span>
-        <span class="ind">IT</span>
+      <p style="margin-top:22px;font-size:14px;color:var(--ink-mute)">Ваша сфера? Нажмите — рассчитаем стоимость под ваш бизнес:</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px">
+        <a href="/pricing" class="ind">Оптовая торговля</a>
+        <a href="/pricing" class="ind">Производство</a>
+        <a href="/pricing" class="ind">Услуги и консалтинг</a>
+        <a href="/pricing" class="ind">ВЭД</a>
+        <a href="/pricing" class="ind">Строительство</a>
+        <a href="/pricing" class="ind">Общепит</a>
+        <a href="/pricing" class="ind">Медицина</a>
+        <a href="/pricing" class="ind">IT</a>
       </div>
     </div>
     <div class="cap">
       <div data-reveal>
         <ul class="cap-list">
-          <li><span class="ix">01</span><span>Собираем НДС к вычету по максимуму и законно, закрываем разрывы по&nbsp;АСК&nbsp;НДС-2</span></li>
-          <li><span class="ix">02</span><span>Готовим и сдаём декларации по НДС и налогу на прибыль точно в&nbsp;срок</span></li>
-          <li><span class="ix">03</span><span>Ведём валютный контроль, таможенный НДС и документы по ВЭД</span></li>
-          <li><span class="ix">04</span><span>Готовим ответы на требования ФНС и сопровождаем камеральные проверки</span></li>
+          <li><span class="ix">01</span><span>Считаем НДС, налог на прибыль и УСН, сдаём декларации точно в&nbsp;срок</span></li>
+          <li><span class="ix">02</span><span>Ведём зарплату, кадры, ВЭД и валютный контроль</span></li>
+          <li><span class="ix">03</span><span>Показываем реальную прибыль, реальные долги и управленческую картину</span></li>
+          <li><span class="ix">04</span><span>Объясняем каждую цифру и подсказываем, что можно&nbsp;улучшить</span></li>
         </ul>
         <div class="cap-cta">
           <a href="/audit" class="btn btn-brass">Бесплатный экспресс-аудит за 3 дня <span class="arw">→</span></a>
         </div>
       </div>
       <aside class="cap-aside" data-reveal data-d="1">
-        <h3>Дайте себе прожить момент спокойствия</h3>
-        <p>Бесплатный аудит — это не презентация услуг, а конкретная картина по вашей компании.</p>
+        <h3>Что покажет бесплатный аудит</h3>
+        <p>Это не презентация услуг, а конкретная картина по вашей компании — за пару минут.</p>
         <div class="mini">
-          <div><span class="ck">✓</span><span>Персональный бухгалтер показывает, <b>сколько НДС вы не добрали к вычету</b> и где разрывы, которые налоговая увидит раньше вас</span></div>
-          <div><span class="ck">✓</span><span>Вы получаете <b>карту налоговых рисков</b> вашей компании на одной странице — и понимаете, за что к вам могут прийти и как это закрыть</span></div>
+          <div><span class="ck">✓</span><span>Где у вас <b>зоны риска</b> и <b>сколько НДС вы не добрали к вычету</b> — то, что налоговая увидит раньше вас</span></div>
+          <div><span class="ck">✓</span><span>Вы получаете <b>карту рисков</b> вашей компании на одной странице — и понимаете, что и как закрыть</span></div>
         </div>
       </aside>
     </div>
@@ -418,13 +419,13 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow">Что вы получите с нами</span>
-      <h2>Спокойствие по всем фронтам учёта</h2>
+      <h2>Что вы получаете с Юнивеж</h2>
     </div>
     <div class="cards">
-      <div class="card" data-reveal data-d="1"><span class="ix">01</span><h3>НДС и&nbsp;прибыль</h3><p>Корректные декларации в срок и максимальный законный вычет — без «сюрпризов» и доплат.</p></div>
-      <div class="card" data-reveal data-d="2"><span class="ix">02</span><h3>Проверки ФНС</h3><p>Подготовленные ответы на требования и сопровождение камералок: ноль доначислений как стандарт.</p></div>
-      <div class="card" data-reveal data-d="3"><span class="ix">03</span><h3>ВЭД</h3><p>Чистый валютный контроль и таможенный НДС — без штрафов за нарушение валютного законодательства.</p></div>
-      <div class="card" data-reveal data-d="4"><span class="ix">04</span><h3>Управление</h3><p>Понятные цифры по прибыли и налоговой нагрузке, чтобы принимать решения, а не гадать.</p></div>
+      <div class="card" data-reveal data-d="1"><span class="ix">01</span><h3>НДС, прибыль и&nbsp;УСН</h3><p>Корректные декларации в срок и максимальный законный вычет — без «сюрпризов» и доплат.</p></div>
+      <div class="card" data-reveal data-d="2"><span class="ix">02</span><h3>Реальные риски</h3><p>Налоговые юристы каждый день видят требования ФНС: отличаем настоящие риски от мифических и закрываем их.</p></div>
+      <div class="card" data-reveal data-d="3"><span class="ix">03</span><h3>ВЭД и&nbsp;зарплата</h3><p>Валютный контроль, таможенный НДС, зарплата и кадры — без штрафов и просрочек.</p></div>
+      <div class="card" data-reveal data-d="4"><span class="ix">04</span><h3>Понятная картина</h3><p>Реальная прибыль, реальные долги и объяснение каждой цифры. Решения на фактах, а не на догадках.</p></div>
     </div>
   </div>
 </section>
@@ -434,24 +435,24 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow">Чем мы отличаемся</span>
-      <h2>Не просто бухгалтеры — аудиторская компания с сильной командой</h2>
-      <p class="lead">Два принципа, которые отличают Юнивеж от обычного аутсорсинга и одиночных бухгалтеров.</p>
+      <h2>Почему у нас цифры объясняют, а не прячутся за 1С</h2>
+      <p class="lead">Что отличает Юнивеж от обычного аутсорсинга и одиночных бухгалтеров.</p>
     </div>
     <div class="out-grid">
       <aside class="cap-aside" data-reveal>
-        <h3>Аудиторы проверяют бухгалтеров</h3>
-        <p>Юнивеж — не только бухгалтерская, но и аудиторская компания. В штате работают аттестованные аудиторы.</p>
+        <h3>Думающие бухгалтеры, а не операторы 1С</h3>
+        <p>За 15 лет аудита мы видели рынок бухгалтеров в деле — и собрали лучших.</p>
         <div class="mini">
-          <div><span class="ck">✓</span><span>Аудиторы контролируют качество работы — не только сторонних бухгалтеров, но и <b>наших собственных</b></span></div>
-          <div><span class="ck">✓</span><span>Двойной контроль — это <b>меньше ошибок и налоговых рисков</b> в вашем учёте, чего не даст один бухгалтер</span></div>
+          <div><span class="ck">✓</span><span>Берём не случайных людей с улицы, а тех, кого <b>увидели в реальной работе</b> на аудитах</span></div>
+          <div><span class="ck">✓</span><span>Они <b>думают и объясняют ваши цифры</b>, а не просто жмут кнопки в 1С и сдают отчётность</span></div>
         </div>
       </aside>
       <aside class="cap-aside" data-reveal data-d="1">
-        <h3>Сила сообщества, а не один человек</h3>
-        <p>Ваш учёт ведёт не одиночка, а команда с общей экспертизой и взаимной подстраховкой.</p>
+        <h3>Двойной контроль: аудиторы и налоговые юристы</h3>
+        <p>Юнивеж — не только бухгалтерия, но и аудит с налоговым консалтингом под одной крышей.</p>
         <div class="mini">
-          <div><span class="ck">✓</span><span>Внутри компании — живое профессиональное сообщество: бухгалтеры <b>советуются, проверяют и помогают друг другу</b></span></div>
-          <div><span class="ck">✓</span><span>Изменения законодательства мы разбираем <b>сообща и быстро</b> — ваш учёт всегда по актуальным правилам</span></div>
+          <div><span class="ck">✓</span><span>Аудиторы проверяют качество работы — не только сторонних бухгалтеров, но и <b>наших собственных</b></span></div>
+          <div><span class="ck">✓</span><span>Налоговые юристы каждый день видят требования ФНС: отличаем <b>реальные риски от мифических</b></span></div>
         </div>
       </aside>
     </div>
@@ -463,15 +464,15 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow">Узнаёте себя?</span>
-      <h2>Вы хотите уверенно расти и заключать крупные контракты? Или — масштабировать оборот, <em>не разорившись на штрафах</em>?</h2>
+      <h2>Бухгалтерия есть, а понимания бизнеса — <em>нет</em>?</h2>
     </div>
     <div class="pains">
-      <div class="pain" data-reveal data-d="1"><span class="q">?</span><p>Уволился или ошибся штатный бухгалтер — и вы не знаете, что творится в учёте</p></div>
-      <div class="pain" data-reveal data-d="1"><span class="q">?</span><p>Контрагенты требуют «чистый» НДС, а вы не уверены, что у вас всё в порядке</p></div>
-      <div class="pain" data-reveal data-d="2"><span class="q">?</span><p>Пришёл запрос или проверка от ФНС — и внутри всё холодеет</p></div>
-      <div class="pain" data-reveal data-d="2"><span class="q">?</span><p>Тревога перед каждой камералкой: «а вдруг доначислят»</p></div>
-      <div class="pain" data-reveal data-d="3"><span class="q">?</span><p>Раздражение от налоговых «сюрпризов», которые всплывают в самый неподходящий момент</p></div>
-      <div class="pain" data-reveal data-d="3"><span class="q">?</span><p>Страх, что счёт заблокируют в разгар сделки — и бизнес встанет</p></div>
+      <div class="pain" data-reveal data-d="1"><span class="q">?</span><p>Не можете получить у бухгалтера ни одной внятной цифры — только «программа так посчитала»</p></div>
+      <div class="pain" data-reveal data-d="1"><span class="q">?</span><p>Не понимаете, какая у вас реальная прибыль и реальные долги</p></div>
+      <div class="pain" data-reveal data-d="2"><span class="q">?</span><p>Учёт запущен, и вы уже не знаете, что в нём на самом деле происходит</p></div>
+      <div class="pain" data-reveal data-d="2"><span class="q">?</span><p>Бухгалтер жмёт кнопки в 1С, но не думает и ничего не объясняет</p></div>
+      <div class="pain" data-reveal data-d="3"><span class="q">?</span><p>Несколько компаний — а единой понятной картины по бизнесу так и нет</p></div>
+      <div class="pain" data-reveal data-d="3"><span class="q">?</span><p>Уже обожглись на дешёвом бухгалтере и не хотите снова на те же грабли</p></div>
     </div>
   </div>
 </section>
@@ -481,21 +482,22 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow">Как мы работаем</span>
-      <h2>Как мы закроем вашу бухгалтерию на ОСНО</h2>
+      <h2>Как мы будем вести учёт на ОСНО и УСН</h2>
     </div>
     <div class="solve">
       <div class="solve-col" data-reveal data-d="1">
-        <span class="tag">Core Job</span>
-        <h3>НДС и налог на прибыль без ошибок</h3>
+        <span class="tag">Налоги</span>
+        <h3>НДС, прибыль и налог на УСН</h3>
         <ul>
+          <li><b>Считаем налог на прибыль и УСН</b><span>верно считаем базу — без переплат и без рисков</span></li>
           <li><b>Собираем и проверяем первичку</b><span>порядок в документах — нечего бояться при запросе</span></li>
-          <li><b>Считаем и сверяем с контрагентами</b><span>нет разрывов — нет доначислений</span></li>
+          <li><b>Считаем НДС и сверяем с контрагентами</b><span>нет разрывов — нет доначислений</span></li>
           <li><b>Сдаём декларации в срок</b><span>нет штрафов за просрочку и блокировок счёта</span></li>
           <li><b>Максимизируем законный вычет</b><span>вы платите ровно столько, сколько должны</span></li>
         </ul>
       </div>
       <div class="solve-col" data-reveal data-d="2">
-        <span class="tag">Core Job</span>
+        <span class="tag">Зарплата и кадры</span>
         <h3>Зарплата, кадры и ВЭД</h3>
         <ul>
           <li><b>Считаем зарплату, взносы и НДФЛ</b><span>сотрудники и налоговая довольны, без просрочек</span></li>
@@ -504,12 +506,12 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
         </ul>
       </div>
       <div class="solve-col" data-reveal data-d="3">
-        <span class="tag">Core Job</span>
-        <h3>Защита при проверках</h3>
+        <span class="tag">Картина бизнеса</span>
+        <h3>Реальная картина вашего бизнеса</h3>
         <ul>
-          <li><b>Готовим ответы на требования ФНС</b><span>вы не объясняетесь сами и не паникуете</span></li>
-          <li><b>Сопровождаем камеральные проверки</b><span>рядом профессионал, а не вы один на один</span></li>
-          <li><b>Держим учёт «проверко-готовым»</b><span>проверка перестаёт быть стрессом</span></li>
+          <li><b>Показываем реальную прибыль и реальные долги</b><span>видите, как на самом деле идут дела</span></li>
+          <li><b>Настраиваем учёт под ваш бизнес</b><span>матответственные, склады, проекты — порядок в активах</span></li>
+          <li><b>Объясняем цифры и риски</b><span>понятно, почему так — и что можно улучшить</span></li>
         </ul>
       </div>
     </div>
@@ -521,20 +523,20 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <span class="eyebrow">К чему вы придёте</span>
-      <h2>Точка, в которой бизнес дышит свободно</h2>
+      <h2>Точка, в которой вы понимаете свой бизнес</h2>
     </div>
     <div class="out-grid">
       <div class="out-feel" data-reveal>
-        <div class="item"><span class="em">01</span><div><b>Спокойствие</b><p>Больше не нужно бояться штрафов, доначислений и блокировки счёта.</p></div></div>
-        <div class="item"><span class="em">02</span><div><b>Уверенность</b><p>Можно брать крупные контракты и расти, зная, что тыл закрыт.</p></div></div>
-        <div class="item"><span class="em">03</span><div><b>Свобода</b><p>Бухгалтерия больше не отнимает ваше время и нервы.</p></div></div>
+        <div class="item"><span class="em">01</span><div><b>Понимание</b><p>Видите реальные цифры и принимаете решения на фактах, а не на догадках.</p></div></div>
+        <div class="item"><span class="em">02</span><div><b>Доверие</b><p>Учёт ведёт команда под контролем аудиторов — вы не зависите от одного человека.</p></div></div>
+        <div class="item"><span class="em">03</span><div><b>Рост</b><p>Берёте крупные контракты и масштабируетесь, не упираясь в бухгалтерию.</p></div></div>
       </div>
       <div class="out-goals" data-reveal data-d="1">
-        <h3>Что вы выполните</h3>
+        <h3>Что вы получите</h3>
         <ul>
-          <li><span class="ck">→</span><span>Уверенно вырастете в обороте и заключите крупные контракты</span></li>
-          <li><span class="ck">→</span><span>Пройдёте проверки ФНС без доначислений</span></li>
-          <li><span class="ck">→</span><span>Перестанете терять деньги на штрафах, пенях и упущенном вычете</span></li>
+          <li><span class="ck">→</span><span>Увидите реальную прибыль и наведёте порядок в учёте</span></li>
+          <li><span class="ck">→</span><span>Получите отчётность, которой поверят банки и инвесторы</span></li>
+          <li><span class="ck">→</span><span>Перестанете зависеть от одного бухгалтера и его настроения</span></li>
         </ul>
       </div>
     </div>
@@ -554,12 +556,12 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
         <div class="body">За вами закрепляется персональный бухгалтер и команда, вы получаете регулярные сверки и прозрачную отчётность. Контроля становится больше, а не меньше.</div>
       </details>
       <details data-reveal>
-        <summary>«У меня сложный учёт — ОСНО, НДС, ВЭД, не разберётесь» <span class="pls">+</span></summary>
-        <div class="body">Мы 15 лет ведём именно такие компании. Сложный учёт с НДС и ВЭД — наш профиль, а не исключение.</div>
+        <summary>«У меня сложный учёт — холдинг, ОСНО, ВЭД, не разберётесь» <span class="pls">+</span></summary>
+        <div class="body">Мы 15 лет ведём именно такие компании — холдинги, стройку, производство, ВЭД, насыщенную операционку. Сложный учёт — наш профиль, а не исключение.</div>
       </details>
       <details data-reveal>
         <summary>«Это дорого» <span class="pls">+</span></summary>
-        <div class="body">Посчитайте цену одной ошибки: доначисление, пени, блокировка счёта в разгар сделки. Наша работа окупается уже тем, что этого не происходит. Премиум — это про спокойствие и сохранённые деньги, а не про переплату.</div>
+        <div class="body">Мы осознанно не самые дешёвые. Почти все наши клиенты сначала пробовали сэкономить — и пришли к нам, уже набив шишки. Премиум здесь — это качество, понятные цифры и сохранённые деньги, а не переплата.</div>
       </details>
       <details data-reveal>
         <summary>«Сложно переходить от текущего бухгалтера» <span class="pls">+</span></summary>
@@ -578,7 +580,7 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
     </div>
     <div class="comp-grid">
       <div class="comp" data-reveal data-d="1"><span class="vs">01</span><span class="fired">увольняем</span><h3>Штатного бухгалтера</h3><p>Одна голова, которая может уволиться, заболеть или ошибиться, плюс налоги на его ФОТ. Мы — команда с подстраховкой и аудиторским контролем качества, без рисков «человеческого фактора».</p></div>
-      <div class="comp" data-reveal data-d="2"><span class="vs">02</span><span class="fired">увольняем</span><h3>Дешёвые онлайн-сервисы</h3><p>Шаблонный самообслуживающий учёт, который не тянет сложный учёт на ОСНО. Мы даём живого бухгалтера, который погружается в ваш бизнес, а не тикет-систему.</p></div>
+      <div class="comp" data-reveal data-d="2"><span class="vs">02</span><span class="fired">увольняем</span><h3>Дешёвые онлайн-сервисы</h3><p>Шаблон и оператор, который жмёт кнопки и не объясняет цифры. Мы даём думающего бухгалтера, который погружается в ваш бизнес, а не тикет-систему.</p></div>
       <div class="comp" data-reveal data-d="3"><span class="vs">03</span><span class="fired">увольняем</span><h3>Фрилансера и дешёвую фирму</h3><p>Экономия, за которой стоит цена ошибки на ОСНО. У нас за результат отвечает компания с 15-летней репутацией, а не один человек без гарантий.</p></div>
     </div>
   </div>
@@ -590,12 +592,12 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
     <div class="final-grid">
       <div data-reveal>
         <span class="eyebrow">Бесплатный аудит</span>
-        <h2>Узнайте свои налоговые риски — до того, как их найдёт ФНС</h2>
-        <p class="lead">Оставьте заявку — персональный бухгалтер за 3 дня проведёт экспресс-аудит вашей бухгалтерии и покажет риски и точки роста по НДС. Бесплатно и без обязательств.</p>
+        <h2>Покажем, что на самом деле происходит в вашем учёте</h2>
+        <p class="lead">Оставьте заявку — за пару минут вы получите карту рисков, а за 3 дня мы покажем реальную картину: прибыль, зоны риска и точки роста. Бесплатно и без обязательств.</p>
         <div class="assure">
-          <div><span class="ck">✓</span> Аудиторы контролируют качество работы бухгалтеров</div>
+          <div><span class="ck">✓</span> Учёт ведут думающие бухгалтеры под контролем аудиторов</div>
           <div><span class="ck">✓</span> Перевод от текущего бухгалтера берём на себя</div>
-          <div><span class="ck">✓</span> 15 лет на рынке · ноль доначислений как стандарт</div>
+          <div><span class="ck">✓</span> 15 лет на рынке · клиенты от нас не уходят</div>
         </div>
       </div>
       <div data-reveal data-d="1">
