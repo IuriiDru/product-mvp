@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Prata, Golos_Text } from "next/font/google";
+import { Unbounded, Inter } from "next/font/google";
 import "./globals.css";
 
-const prata = Prata({
-  weight: "400",
+const unbounded = Unbounded({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin", "cyrillic"],
-  variable: "--font-prata",
+  variable: "--font-unbounded",
   display: "swap",
 });
 
-const golos = Golos_Text({
+const inter = Inter({
   subsets: ["latin", "cyrillic"],
-  variable: "--font-golos",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ru" className={`${prata.variable} ${golos.variable}`}>
+    <html lang="ru" className={`${unbounded.variable} ${inter.variable}`}>
       <body className="flex min-h-screen flex-col">{children}</body>
     </html>
   );
