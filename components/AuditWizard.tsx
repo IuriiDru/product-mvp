@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   QUESTIONS,
   scoreAudit,
@@ -10,13 +10,22 @@ import {
 import RiskMap from "@/components/RiskMap";
 import LeadForm from "@/components/LeadForm";
 
-type Phase = "quiz" | "result" | "done";
+type Phase = "quiz" | "result" | "done" | "fullrequest";
 
 export default function AuditWizard() {
   const [answers, setAnswers] = useState<Answers>({});
   const [step, setStep] = useState(0);
   const [phase, setPhase] = useState<Phase>("quiz");
   const [result, setResult] = useState<AuditResult | null>(null);
+
+  // Прямой запрос полного аудита с лендинга (минуя опросник): /audit?full=1
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("full") === "1" || window.location.hash === "#full") {
+      setResult(scoreAudit({}));
+      setPhase("fullrequest");
+    }
+  }, []);
 
   const total = QUESTIONS.length;
   const question = QUESTIONS[step];
@@ -63,6 +72,33 @@ export default function AuditWizard() {
         >
           Пройти аудит заново
         </button>
+      </div>
+    );
+  }
+
+  // --- Прямой запрос полного аудита (кнопка с лендинга «при заключении договора») ---
+  if (phase === "fullrequest" && result) {
+    return (
+      <div className="animate-fade-up">
+        <div className="mb-6 rounded-3xl border border-pine/10 bg-paper-2 p-6 text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brass">
+            Бесплатно при заключении договора
+          </p>
+          <p className="mx-auto mt-3 max-w-md text-sm text-ink-soft">
+            Полный аудит вашего учёта бесплатен при заключении договора на
+            бухгалтерское обслуживание. Оставьте контакты — бухгалтер Юнивеж
+            свяжется и согласует удобное время.
+          </p>
+        </div>
+        <LeadForm result={result} answers={{}} onSuccess={() => setPhase("done")} />
+        <div className="mt-6 text-center">
+          <a
+            href="/audit"
+            className="text-sm font-medium text-ink-soft underline-offset-4 transition hover:text-pine hover:underline"
+          >
+            Или пройти быстрый экспресс-аудит →
+          </a>
+        </div>
       </div>
     );
   }
