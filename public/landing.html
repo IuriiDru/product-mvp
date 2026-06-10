@@ -106,7 +106,7 @@ header.scrolled .nav{padding:13px 0}
 .burger span{width:24px;height:2px;background:var(--ink);transition:.3s}
 
 /* ---------- hero ---------- */
-.hero{padding:170px 0 90px;position:relative}
+.hero{padding:116px 0 52px;position:relative}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
 .hero h1{font-size:clamp(32px,5vw,58px);margin:26px 0 0}
 .hero h1 .accent{color:var(--brass)}
@@ -131,7 +131,7 @@ header.scrolled .nav{padding:13px 0}
 .seal .stamp{position:absolute;top:6%;right:2%;background:var(--brass);color:#ffffff;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 13px;border-radius:6px;transform:rotate(8deg);box-shadow:var(--shadow-soft)}
 
 /* stat strip */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:78px;border-top:1px solid rgba(3,74,100,.15);border-bottom:1px solid rgba(3,74,100,.15)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:38px;border-top:1px solid rgba(3,74,100,.15);border-bottom:1px solid rgba(3,74,100,.15)}
 .stat{padding:30px 28px;border-left:1px solid rgba(3,74,100,.12)}
 .stat:first-child{border-left:none}
 .stat .num{font-family:"Unbounded";font-size:clamp(44px,5vw,62px);color:var(--pine);line-height:1;display:flex;align-items:baseline;gap:6px}
@@ -220,6 +220,7 @@ details .body{padding:0 28px 26px;color:var(--ink-mute);font-size:16px;max-width
 .comp{background:var(--paper-2);border-radius:var(--r);padding:34px 30px;position:relative;border:1px solid rgba(3,74,100,.1);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
 .comp:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
 .comp .fired{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A2E22;background:rgba(138,46,34,.1);padding:6px 12px;border-radius:100px;margin-bottom:18px}
+.comp .save{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);background:rgba(218,99,52,.12);padding:6px 12px;border-radius:100px;margin-bottom:18px}
 .comp h3{font-family:"Inter";font-weight:700;font-size:19px;margin-bottom:14px}
 .comp p{font-size:15px;color:var(--ink-mute)}
 .comp .vs{position:absolute;top:28px;right:28px;font-family:"Unbounded";font-size:30px;color:rgba(3,74,100,.12)}
@@ -308,6 +309,31 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
   [data-reveal]{opacity:1;transform:none}
   .hero h1,.hero .eyebrow,.hero .lead,.hero-cta,.hero-note,.hero-visual{opacity:1}
 }
+
+/* ---------- guarantee strip ---------- */
+.guarantee{display:flex;gap:24px;align-items:center;background:var(--pine);color:var(--cream);border-radius:var(--r);padding:26px 38px;box-shadow:var(--shadow);position:relative;overflow:hidden;margin-top:40px}
+.guarantee::before{content:"";position:absolute;top:-50px;right:-30px;width:180px;height:180px;border-radius:50%;border:1px solid rgba(218,99,52,.3);pointer-events:none}
+.guarantee__ic{flex:none;width:66px;height:66px;border-radius:50%;border:1.5px solid var(--brass);display:grid;place-items:center;font-size:30px;color:var(--brass-bright);background:rgba(218,99,52,.08)}
+.guarantee b{font-family:"Unbounded";font-weight:500;font-size:clamp(18px,2vw,23px);display:block;line-height:1.22;color:var(--cream)}
+.guarantee p{color:var(--cream-mute);font-size:15.5px;margin-top:10px;max-width:74ch}
+@media(max-width:560px){.guarantee{flex-direction:column;text-align:center;padding:28px 24px}}
+
+/* ---------- calc choice modal ---------- */
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:24px}
+.modal.open{display:flex}
+.modal__backdrop{position:absolute;inset:0;background:rgba(0,23,34,.62);backdrop-filter:blur(4px)}
+.modal__card{position:relative;z-index:1;background:var(--cream);border-radius:22px;padding:42px;max-width:540px;width:100%;box-shadow:var(--shadow);animation:fadeUp .4s var(--ease)}
+.modal__card h3{font-family:"Unbounded";font-size:26px;margin-bottom:10px}
+.modal__card .sub{font-size:15px;color:var(--ink-mute);margin-bottom:26px}
+.modal__opts{display:flex;flex-direction:column;gap:14px}
+.modal__opt{display:flex;gap:16px;align-items:center;text-align:left;padding:20px 22px;border:1px solid rgba(3,74,100,.18);border-radius:16px;background:var(--paper-2);cursor:pointer;transition:transform .35s var(--ease),border-color .3s,box-shadow .35s;width:100%}
+.modal__opt:hover{transform:translateY(-3px);border-color:var(--brass);box-shadow:var(--shadow-soft)}
+.modal__opt .ic{flex:none;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-size:22px;background:var(--pine);color:var(--cream)}
+.modal__opt.brass .ic{background:linear-gradient(135deg,var(--brass-bright),var(--brass))}
+.modal__opt b{display:block;font-size:17px;font-weight:700;color:var(--ink);font-family:"Inter"}
+.modal__opt .d{font-size:14px;color:var(--ink-mute)}
+.modal__close{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(3,74,100,.2);background:var(--paper);cursor:pointer;font-size:22px;line-height:1;color:var(--ink-mute);display:grid;place-items:center;transition:.3s}
+.modal__close:hover{border-color:var(--brass);color:var(--ink)}
 </style>
 </head>
 <body>
@@ -326,7 +352,7 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
       <a href="#faq">Сомнения</a>
     </nav>
     <div class="nav-cta">
-      <a href="/audit" class="btn btn-primary">Бесплатный аудит <span class="arw">→</span></a>
+      <button type="button" class="btn btn-brass js-calc">Рассчитать стоимость <span class="arw">→</span></button>
       <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -341,10 +367,10 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
         <h1>Бухгалтерия, которая видит за&nbsp;цифрами <span class="accent">реальный бизнес</span></h1>
         <p class="lead">Не «программа так посчитала» — а «давайте объясним, где ваша прибыль, какие у вас реальные долги и какие риски, и обсудим, что можно улучшить». Учёт ведут думающие бухгалтеры под контролем аудиторов: за 15&nbsp;лет аудита мы видели рынок бухгалтеров в деле и собрали лучших.</p>
         <div class="hero-cta">
-          <a href="/audit" class="btn btn-primary btn-lg">Получить бесплатный аудит <span class="arw">→</span></a>
-          <a href="/pricing" class="btn btn-ghost btn-lg">Рассчитать стоимость <span class="arw">→</span></a>
+          <a href="/audit" class="btn btn-ghost btn-lg">Бесплатный аудит <span class="arw">→</span></a>
+          <button type="button" class="btn btn-brass btn-lg js-calc">Рассчитать стоимость <span class="arw">→</span></button>
         </div>
-        <div class="hero-note"><span class="dot"></span> За пару минут покажем карту рисков, за 3 дня — реальную картину вашего учёта</div>
+        <div class="hero-note"><span class="dot"></span> Полное бухгалтерское обслуживание — от&nbsp;30&nbsp;000&nbsp;₽/мес. За пару минут покажем карту рисков, за 3 дня — реальную картину учёта</div>
       </div>
       <div class="hero-visual">
         <div class="seal" aria-hidden="true">
@@ -363,10 +389,18 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
       </div>
     </div>
 
+    <div class="guarantee" data-reveal>
+      <span class="guarantee__ic" aria-hidden="true">⚖</span>
+      <div>
+        <b>Отвечаем за штрафы и пени по нашей вине — по договору</b>
+        <p>Если налоговая доначислит штраф или пеню из-за нашей ошибки — компенсируем мы, а не вы. Эта ответственность прямо закреплена в договоре, а не остаётся на словах.</p>
+      </div>
+    </div>
+
     <div class="stats">
       <div class="stat" data-reveal data-d="1"><div class="num">15<small>лет</small></div><div class="lbl">проводим аудит и ведём бухгалтерию бизнеса</div></div>
-      <div class="stat" data-reveal data-d="2"><div class="num">25</div><div class="lbl">компаний на постоянном бухгалтерском обслуживании</div></div>
-      <div class="stat" data-reveal data-d="3"><div class="num">15</div><div class="lbl">бухгалтеров — отобраны за годы аудита, под контролем аудиторов</div></div>
+      <div class="stat" data-reveal data-d="2"><div class="num">100<small>+</small></div><div class="lbl">компаний ежегодно проходят у нас аудит — и остаются на бухгалтерском обслуживании</div></div>
+      <div class="stat" data-reveal data-d="3"><div class="num" style="font-size:clamp(28px,3.2vw,40px);line-height:1.05">СРО ААС</div><div class="lbl">членство аудиторской компании в саморегулируемой организации аудиторов</div></div>
     </div>
   </div>
 </section>
@@ -472,7 +506,7 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
       <div class="pain" data-reveal data-d="2"><span class="q">?</span><p>Учёт запущен, и вы уже не знаете, что в нём на самом деле происходит</p></div>
       <div class="pain" data-reveal data-d="2"><span class="q">?</span><p>Бухгалтер жмёт кнопки в 1С, но не думает и ничего не объясняет</p></div>
       <div class="pain" data-reveal data-d="3"><span class="q">?</span><p>Несколько компаний — а единой понятной картины по бизнесу так и нет</p></div>
-      <div class="pain" data-reveal data-d="3"><span class="q">?</span><p>Уже обожглись на дешёвом бухгалтере и не хотите снова на те же грабли</p></div>
+      <div class="pain" data-reveal data-d="3"><span class="q">?</span><p>Уже обожглись на бухгалтере и не хотите снова на те же грабли</p></div>
     </div>
   </div>
 </section>
@@ -530,6 +564,7 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
         <div class="item"><span class="em">01</span><div><b>Понимание</b><p>Видите реальные цифры и принимаете решения на фактах, а не на догадках.</p></div></div>
         <div class="item"><span class="em">02</span><div><b>Доверие</b><p>Учёт ведёт команда под контролем аудиторов — вы не зависите от одного человека.</p></div></div>
         <div class="item"><span class="em">03</span><div><b>Рост</b><p>Берёте крупные контракты и масштабируетесь, не упираясь в бухгалтерию.</p></div></div>
+        <div class="item"><span class="em">04</span><div><b>Спокойствие</b><p>Налоги под контролем, риски закрыты — никаких внезапных требований, доначислений и блокировок от налоговой.</p></div></div>
       </div>
       <div class="out-goals" data-reveal data-d="1">
         <h3>Что вы получите</h3>
@@ -537,6 +572,7 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
           <li><span class="ck">→</span><span>Увидите реальную прибыль и наведёте порядок в учёте</span></li>
           <li><span class="ck">→</span><span>Получите отчётность, которой поверят банки и инвесторы</span></li>
           <li><span class="ck">→</span><span>Перестанете зависеть от одного бухгалтера и его настроения</span></li>
+          <li><span class="ck">→</span><span>Будете понимать свою налоговую нагрузку — прозрачно и без нервов, без сюрпризов от налоговой</span></li>
         </ul>
       </div>
     </div>
@@ -561,27 +597,56 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
       </details>
       <details data-reveal>
         <summary>«Это дорого» <span class="pls">+</span></summary>
-        <div class="body">Мы осознанно не самые дешёвые. Почти все наши клиенты сначала пробовали сэкономить — и пришли к нам, уже набив шишки. Премиум здесь — это качество, понятные цифры и сохранённые деньги, а не переплата.</div>
+        <div class="body">Полное бухгалтерское обслуживание — от&nbsp;30&nbsp;000&nbsp;₽/мес; точная стоимость зависит от объёма операций и считается индивидуально. Мы осознанно не самые дешёвые. Почти все наши клиенты сначала пробовали сэкономить — и пришли к нам, уже набив шишки. Премиум здесь — это качество, понятные цифры и сохранённые деньги, а не переплата.</div>
       </details>
       <details data-reveal>
         <summary>«Сложно переходить от текущего бухгалтера» <span class="pls">+</span></summary>
         <div class="body">Перевод берём на себя: начинаем с бесплатного аудита текущего состояния и аккуратно принимаем дела.</div>
       </details>
+      <details data-reveal>
+        <summary>Кто отвечает за ошибки в учёте и штрафы? <span class="pls">+</span></summary>
+        <div class="body">Мы несём финансовую ответственность за ошибки, допущенные по нашей вине: если из-за них возникают штрафы или пени — мы их возмещаем. Это прямое обязательство, закреплённое в договоре, а не декларация.</div>
+      </details>
+      <details data-reveal>
+        <summary>Что будет, если бухгалтер уволится? <span class="pls">+</span></summary>
+        <div class="body">Ничего критичного. Вашим учётом занимается не один специалист, а команда под контролем аудиторов. Данные и документы доступны всем ответственным сотрудникам, поэтому передача дел при смене специалиста занимает часы, а не недели.</div>
+      </details>
+      <details data-reveal>
+        <summary>Где хранятся мои данные и документы? <span class="pls">+</span></summary>
+        <div class="body">Ваша база 1С и документы принадлежат только вам — у нас лишь рабочий доступ. В любой момент вы можете получить полную копию базы и всех документов.</div>
+      </details>
+      <details data-reveal>
+        <summary>Работаете удалённо? Нужно ли приезжать в офис? <span class="pls">+</span></summary>
+        <div class="body">Работаем удалённо с компаниями по всей России. Документооборот ведём в электронном виде; для подписания договора возможен очный формат в Москве или дистанционный через ЭДО.</div>
+      </details>
+      <details data-reveal>
+        <summary>Работаете только в 1С? <span class="pls">+</span></summary>
+        <div class="body">Да, мы специализируемся на 1С:Бухгалтерия и 1С:Зарплата и управление персоналом — это обеспечивает качество и внутренний контроль. Если у вас другая система, обсудим миграцию данных на первичной консультации.</div>
+      </details>
+      <details data-reveal>
+        <summary>Можно ли перейти к вам в середине года? <span class="pls">+</span></summary>
+        <div class="body">Да, переход возможен в любое время года. Принимаем базу 1С, проверяем состояние учёта в рамках бесплатного аудита и при необходимости восстанавливаем корректность данных — сроки сдачи отчётности не нарушаются.</div>
+      </details>
+      <details data-reveal>
+        <summary>Входит ли кадровый учёт в обслуживание? <span class="pls">+</span></summary>
+        <div class="body">Кадровый учёт подключается по согласованию и включается в договор отдельным блоком: берём на себя кадровое делопроизводство, оформление трудовых отношений, ведение личных дел и кадровую отчётность.</div>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- COMPETITORS -->
+<!-- SAVINGS -->
 <section class="sec outcomes" id="why">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <span class="eyebrow">Почему мы</span>
-      <h2>Кого мы увольняем за вас</h2>
+      <span class="eyebrow">Ваша экономия</span>
+      <h2>На чём вы экономите с Юнивеж</h2>
+      <p class="lead">Аутсорсинг — это не просто «отдать бухгалтерию». Это деньги, которые остаются в вашем бизнесе.</p>
     </div>
     <div class="comp-grid">
-      <div class="comp" data-reveal data-d="1"><span class="vs">01</span><span class="fired">увольняем</span><h3>Штатного бухгалтера</h3><p>Одна голова, которая может уволиться, заболеть или ошибиться, плюс налоги на его ФОТ. Мы — команда с подстраховкой и аудиторским контролем качества, без рисков «человеческого фактора».</p></div>
-      <div class="comp" data-reveal data-d="2"><span class="vs">02</span><span class="fired">увольняем</span><h3>Дешёвые онлайн-сервисы</h3><p>Шаблон и оператор, который жмёт кнопки и не объясняет цифры. Мы даём думающего бухгалтера, который погружается в ваш бизнес, а не тикет-систему.</p></div>
-      <div class="comp" data-reveal data-d="3"><span class="vs">03</span><span class="fired">увольняем</span><h3>Фрилансера и дешёвую фирму</h3><p>Экономия, за которой стоит цена ошибки на ОСНО. У нас за результат отвечает компания с 15-летней репутацией, а не один человек без гарантий.</p></div>
+      <div class="comp" data-reveal data-d="1"><span class="vs">01</span><span class="save">экономия</span><h3>На штатной бухгалтерии</h3><p>Не платите оклад и налоги с ФОТ, отпуска и больничные, рабочее место и лицензии 1С. Вместо содержания целого штата — одна предсказуемая абонентская плата.</p></div>
+      <div class="comp" data-reveal data-d="2"><span class="vs">02</span><span class="save">экономия</span><h3>На штрафах и доначислениях</h3><p>Двойной контроль аудиторов и налоговых юристов не даёт ошибкам дойти до налоговой. А за ошибки по нашей вине отвечаем мы — штрафы и пени компенсируем сами.</p></div>
+      <div class="comp" data-reveal data-d="3"><span class="vs">03</span><span class="save">экономия</span><h3>На переплате налогов</h3><p>Считаем налоги честно и используем все законные вычеты — вы платите ровно столько, сколько должны, без переплат «на всякий случай» и без рисков.</p></div>
     </div>
   </div>
 </section>
@@ -622,8 +687,8 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
       </a>
       <div class="foot-cols">
         <div class="foot-col"><h4>Услуги</h4><a href="#services">Бухгалтерия на ОСНО</a><a href="#services">НДС и налог на прибыль</a><a href="#services">ВЭД и валютный контроль</a><a href="#services">Сопровождение проверок</a></div>
-        <div class="foot-col"><h4>Компания</h4><a href="#how">Как мы работаем</a><a href="#why">Почему мы</a><a href="/audit">Бесплатный аудит</a><a href="/pricing">Расчёт стоимости</a></div>
-        <div class="foot-col"><h4>Контакты</h4><a href="tel:+79030010594">+7 (903) 001-05-94</a><a href="mailto:info@univeige.ru">info@univeige.ru</a><a href="https://t.me/UniveigeAudit" target="_blank" rel="noopener">Telegram: @UniveigeAudit</a><p>Москва, Ленинский проспект, 66</p><p>Пн–Пт, 9:00–19:00</p></div>
+        <div class="foot-col"><h4>Компания</h4><a href="#how">Как мы работаем</a><a href="#why">На чём вы экономите</a><a href="/audit">Бесплатный аудит</a><a href="/pricing">Расчёт стоимости</a></div>
+        <div class="foot-col"><h4>Контакты</h4><a href="tel:+79030010594">+7 (903) 001-05-94</a><a href="mailto:info@univeige.ru">info@univeige.ru</a><a href="https://t.me/UnivezhBot" target="_blank" rel="noopener">Telegram: @UnivezhBot</a><p>Москва, Ленинский проспект, 66</p><p>Пн–Пт, 9:00–19:00</p></div>
       </div>
     </div>
     <div class="foot-bottom">
@@ -632,6 +697,26 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
     </div>
   </div>
 </footer>
+
+<!-- CALC CHOICE MODAL -->
+<div class="modal" id="calcModal" role="dialog" aria-modal="true" aria-labelledby="calcTitle">
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__card">
+    <button class="modal__close" type="button" data-close aria-label="Закрыть">×</button>
+    <h3 id="calcTitle">Рассчитать стоимость</h3>
+    <p class="sub">Выберите, как удобнее получить расчёт под ваш бизнес:</p>
+    <div class="modal__opts">
+      <a class="modal__opt brass" href="https://t.me/UnivezhBot" target="_blank" rel="noopener">
+        <span class="ic" aria-hidden="true">✈</span>
+        <span><b>Рассчитать в Telegram</b><span class="d">Ответите на вопросы боту — быстро, прямо в мессенджере</span></span>
+      </a>
+      <a class="modal__opt" href="/pricing">
+        <span class="ic" aria-hidden="true">📝</span>
+        <span><b>Заполнить анкету на сайте</b><span class="d">Форма расчёта прямо здесь, на сайте</span></span>
+      </a>
+    </div>
+  </div>
+</div>
 
 <script>
 // header scroll state
@@ -652,6 +737,14 @@ const io=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
 },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
 document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+
+// calc choice modal
+const calcModal=document.getElementById('calcModal');
+const openCalc=()=>{calcModal.classList.add('open');document.body.style.overflow='hidden';};
+const closeCalc=()=>{calcModal.classList.remove('open');document.body.style.overflow='';};
+document.querySelectorAll('.js-calc').forEach(b=>b.addEventListener('click',openCalc));
+calcModal.querySelectorAll('[data-close]').forEach(el=>el.addEventListener('click',closeCalc));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&calcModal.classList.contains('open'))closeCalc();});
 </script>
 </body>
 </html>
