@@ -58,11 +58,12 @@ export default function LeadForm({ result, answers, onSuccess }: Props) {
   return (
     <div className="mt-6 rounded-3xl bg-pine p-8 text-cream">
       <h3 className="font-display text-2xl text-cream">
-        Получить бесплатный полный аудит
+        Полный аудит — бесплатно при заключении договора
       </h3>
       <p className="mt-2 text-sm text-cream/70">
-        Бухгалтер Юнивеж разберёт ваши риски детально и подскажет, как их закрыть.
-        Перезвоним в течение рабочего дня.
+        Полный аудит вашего учёта бесплатен при заключении договора на
+        бухгалтерское обслуживание. Бухгалтер Юнивеж разберёт ваши риски детально
+        и подскажет, как их закрыть. Перезвоним в течение рабочего дня.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-4" noValidate>
