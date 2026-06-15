@@ -8,6 +8,7 @@ export default function PricingForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [comment, setComment] = useState("");
+  const [consent, setConsent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
@@ -21,6 +22,10 @@ export default function PricingForm() {
     setError(null);
     if (!name.trim() || !phone.trim()) {
       setError("Укажите, пожалуйста, имя и телефон для связи.");
+      return;
+    }
+    if (!consent) {
+      setError("Подтвердите согласие на обработку персональных данных.");
       return;
     }
     setSubmitting(true);
@@ -219,16 +224,32 @@ export default function PricingForm() {
             <p className="rounded-xl bg-risk-high/20 px-4 py-3 text-sm text-cream">{error}</p>
           )}
 
+          <label className="flex cursor-pointer items-start gap-3 text-xs text-cream/70">
+            <input
+              type="checkbox"
+              checked={consent}
+              onChange={(e) => setConsent(e.target.checked)}
+              className="mt-0.5 h-4 w-4 flex-none accent-brass-bright"
+            />
+            <span>
+              Я согласен(а) на обработку персональных данных в соответствии с{" "}
+              <a href="/privacy" target="_blank" rel="noopener" className="underline hover:text-cream">
+                Политикой обработки ПДн
+              </a>{" "}
+              и даю{" "}
+              <a href="/consent" target="_blank" rel="noopener" className="underline hover:text-cream">
+                Согласие на обработку ПДн
+              </a>.
+            </span>
+          </label>
+
           <button
             type="submit"
-            disabled={submitting}
+            disabled={submitting || !consent}
             className="w-full rounded-full bg-brass-bright px-6 py-4 text-base font-semibold text-pine-deep transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {submitting ? "Отправляем…" : "Отправить анкету →"}
           </button>
-          <p className="text-center text-xs text-cream/55">
-            Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
-          </p>
         </div>
       </div>
     </form>

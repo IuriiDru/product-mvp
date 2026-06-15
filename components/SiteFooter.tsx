@@ -8,13 +8,16 @@ export default function SiteFooter() {
           <span className="font-display text-lg text-cream">Юнивеж</span>
           <span className="ml-3 text-cream/55">© 2011–2026 · бухгалтерский аутсорсинг</span>
         </div>
-        <nav className="flex gap-5">
+        <nav className="flex flex-wrap gap-x-5 gap-y-2">
           <Link href="/audit" className="transition hover:text-cream">
             Экспресс-аудит
           </Link>
-          <Link href="/admin" className="transition hover:text-cream">
-            Заявки
-          </Link>
+          <a href="/privacy" className="transition hover:text-cream">
+            Политика обработки ПДн
+          </a>
+          <a href="/consent" className="transition hover:text-cream">
+            Согласие на обработку ПДн
+          </a>
         </nav>
       </div>
     </footer>
