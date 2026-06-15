@@ -58,6 +58,9 @@ h1,h2,h3,.display{font-family:"Unbounded",serif;font-weight:600;letter-spacing:-
 a{color:inherit;text-decoration:none}
 .tlink{color:var(--pine);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(3,74,100,.4);transition:color .25s,text-decoration-color .25s}
 .tlink:hover{color:var(--brass);text-decoration-color:var(--brass)}
+/* ссылка на тёмном фоне (cap-aside) — оранжевая, видна сразу */
+.cap-aside .tlink{color:var(--brass-bright);text-decoration-color:rgba(238,122,69,.55)}
+.cap-aside .tlink:hover{color:var(--cream);text-decoration-color:var(--cream)}
 .eyebrow{
   font-size:12.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
   color:var(--brass);display:inline-flex;align-items:center;gap:12px;
@@ -354,15 +357,14 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
 /* ---------- company cross-link card ---------- */
 .company-card{
   margin-top:30px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;
-  padding:30px 36px;border-radius:var(--r);position:relative;overflow:hidden;
-  background:linear-gradient(135deg,var(--paper-2),var(--paper-3));
-  border:1px solid rgba(3,74,100,.14);box-shadow:var(--shadow-soft);
+  padding:30px 38px;border-radius:var(--r);position:relative;overflow:hidden;
+  background:var(--pine);color:var(--cream);box-shadow:var(--shadow);
 }
-.company-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--brass-bright),var(--brass))}
-.company-card__text{max-width:60ch}
-.company-card__text h3{font-family:"Unbounded";font-weight:500;font-size:clamp(18px,2vw,22px);letter-spacing:-.01em;color:var(--pine-deep);margin-bottom:7px}
-.company-card__text p{color:var(--ink-mute);font-size:15.5px}
-.company-card .btn{flex:none}
+.company-card::before{content:"";position:absolute;top:-50px;right:-30px;width:180px;height:180px;border-radius:50%;border:1px solid rgba(218,99,52,.3);pointer-events:none}
+.company-card__text{max-width:60ch;position:relative;z-index:1}
+.company-card__text h3{font-family:"Unbounded";font-weight:500;font-size:clamp(18px,2vw,22px);letter-spacing:-.01em;color:var(--cream);margin-bottom:7px}
+.company-card__text p{color:var(--cream-mute);font-size:15.5px}
+.company-card .btn{flex:none;position:relative;z-index:1}
 @media(max-width:640px){.company-card{padding:24px}.company-card .btn{width:100%;justify-content:center}}
 
 /* ---------- calc choice modal ---------- */
