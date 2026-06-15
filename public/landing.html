@@ -56,6 +56,8 @@ body::after{
 section{position:relative;z-index:2}
 h1,h2,h3,.display{font-family:"Unbounded",serif;font-weight:600;letter-spacing:-.02em;line-height:1.06}
 a{color:inherit;text-decoration:none}
+.tlink{color:var(--pine);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(3,74,100,.4);transition:color .25s,text-decoration-color .25s}
+.tlink:hover{color:var(--brass);text-decoration-color:var(--brass)}
 .eyebrow{
   font-size:12.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
   color:var(--brass);display:inline-flex;align-items:center;gap:12px;
@@ -552,7 +554,7 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
       </aside>
       <aside class="cap-aside" data-reveal data-d="1">
         <h3>Двойной контроль: аудиторы и налоговые юристы</h3>
-        <p>Юнивеж — не только бухгалтерия, но и аудит с налоговым консалтингом под одной крышей.</p>
+        <p>Юнивеж — не только бухгалтерия, но и <a href="https://univeige.ru/" target="_blank" rel="noopener" class="tlink">аудит с налоговым консалтингом</a> под одной крышей.</p>
         <div class="mini">
           <div><span class="ck">✓</span><span>Аудиторы проверяют качество работы — не только сторонних бухгалтеров, но и <b>наших собственных</b></span></div>
           <div><span class="ck">✓</span><span>Налоговые юристы каждый день видят требования ФНС: отличаем <b>реальные риски от мифических</b></span></div>
@@ -737,7 +739,7 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
         <span><b>Юнивеж</b><small>бухгалтерский аутсорсинг · с 2011 года</small></span>
       </a>
       <div class="foot-cols">
-        <div class="foot-col"><h4>Услуги</h4><a href="#services">Бухгалтерия на ОСНО</a><a href="#services">НДС и налог на прибыль</a><a href="#services">ВЭД и валютный контроль</a><a href="#services">Сопровождение проверок</a></div>
+        <div class="foot-col"><h4>Услуги</h4><a href="#services">Бухгалтерия на ОСНО</a><a href="#services">НДС и налог на прибыль</a><a href="#services">ВЭД и валютный контроль</a><a href="#services">Сопровождение проверок</a><a href="https://univeige.ru/" target="_blank" rel="noopener">Аудит и налоговый консалтинг&nbsp;↗</a></div>
         <div class="foot-col"><h4>Компания</h4><a href="#how">Как мы работаем</a><a href="#why">На чём вы экономите</a><a href="/audit">Бесплатный экспресс-аудит</a><a href="/pricing">Расчёт стоимости</a></div>
         <div class="foot-col"><h4>Контакты</h4><a href="tel:+79030010594">+7 (903) 001-05-94</a><a href="mailto:info@univeige.ru">info@univeige.ru</a><a href="https://t.me/UnivezhBot" target="_blank" rel="noopener">Telegram: @UnivezhBot</a><p>Москва, Ленинский проспект, 66</p><p>Пн–Пт, 9:00–19:00</p></div>
       </div>
