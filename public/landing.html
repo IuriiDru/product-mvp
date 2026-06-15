@@ -351,6 +351,20 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
 .team-photo.noimg img{display:none}
 .team-photo.noimg::before{content:"Здесь будет фото команды";font-family:"Unbounded";font-size:clamp(16px,2.4vw,22px);color:var(--brass-bright);padding:0 24px}
 
+/* ---------- company cross-link card ---------- */
+.company-card{
+  margin-top:30px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;
+  padding:30px 36px;border-radius:var(--r);position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--paper-2),var(--paper-3));
+  border:1px solid rgba(3,74,100,.14);box-shadow:var(--shadow-soft);
+}
+.company-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--brass-bright),var(--brass))}
+.company-card__text{max-width:60ch}
+.company-card__text h3{font-family:"Unbounded";font-weight:500;font-size:clamp(18px,2vw,22px);letter-spacing:-.01em;color:var(--pine-deep);margin-bottom:7px}
+.company-card__text p{color:var(--ink-mute);font-size:15.5px}
+.company-card .btn{flex:none}
+@media(max-width:640px){.company-card{padding:24px}.company-card .btn{width:100%;justify-content:center}}
+
 /* ---------- calc choice modal ---------- */
 .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:24px}
 .modal.open{display:flex}
@@ -448,6 +462,13 @@ footer{background:var(--pine-dark);color:var(--cream-mute);padding:60px 0 36px}
         <img src="/team.jpg" alt="Команда Юнивеж — бухгалтеры, аудиторы и налоговые юристы"
              loading="lazy" onerror="this.closest('.team-photo').classList.add('noimg')">
       </figure>
+      <div class="company-card">
+        <div class="company-card__text">
+          <h3>Юнивеж — это не только бухгалтерия</h3>
+          <p>Аудит и налоговый консалтинг под одной крышей. Полный спектр услуг компании — на основном сайте.</p>
+        </div>
+        <a href="https://univeige.ru/" target="_blank" rel="noopener" class="btn btn-outline-orange">Все услуги компании <span class="arw">→</span></a>
+      </div>
     </div>
 
     <div class="stats">
