@@ -15,12 +15,20 @@ export default function SiteHeader() {
             </span>
           </span>
         </Link>
-        <Link
-          href="/audit"
-          className="rounded-full bg-pine px-5 py-2.5 text-sm font-semibold text-cream transition hover:-translate-y-0.5 hover:shadow-lg"
-        >
-          Пройти аудит
-        </Link>
+        <div className="flex items-center gap-5">
+          <Link
+            href="/blog"
+            className="hidden text-sm font-medium text-ink-soft transition hover:text-pine sm:block"
+          >
+            Блог
+          </Link>
+          <Link
+            href="/audit"
+            className="rounded-full bg-pine px-5 py-2.5 text-sm font-semibold text-cream transition hover:-translate-y-0.5 hover:shadow-lg"
+          >
+            Пройти аудит
+          </Link>
+        </div>
       </div>
     </header>
   );
