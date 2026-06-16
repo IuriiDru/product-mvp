@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { type AuditResult, type Answers } from "@/lib/audit";
+import { ymGoal } from "@/lib/metrika";
 
 interface Props {
   result: AuditResult;
@@ -49,6 +50,7 @@ export default function LeadForm({ result, answers, onSuccess }: Props) {
         const data = await res.json().catch(() => ({}));
         throw new Error(data.error || "Не удалось отправить заявку.");
       }
+      ymGoal("lead_audit");
       onSuccess();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Не удалось отправить заявку.");

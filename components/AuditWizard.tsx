@@ -9,6 +9,7 @@ import {
 } from "@/lib/audit";
 import RiskMap from "@/components/RiskMap";
 import LeadForm from "@/components/LeadForm";
+import { ymGoal } from "@/lib/metrika";
 
 type Phase = "quiz" | "result" | "done" | "fullrequest";
 
@@ -33,6 +34,8 @@ export default function AuditWizard() {
   const progress = Math.round((step / total) * 100);
 
   function choose(idx: number) {
+    // Первый ответ в опроснике = реальный старт аудита.
+    if (step === 0) ymGoal("audit_start");
     const next = { ...answers, [question.id]: idx };
     setAnswers(next);
     if (step < total - 1) {
@@ -40,6 +43,7 @@ export default function AuditWizard() {
     } else {
       setResult(scoreAudit(next));
       setPhase("result");
+      ymGoal("audit_result");
     }
   }
 

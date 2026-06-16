@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { PRICING_SCHEMA, type PricingAnswers } from "@/lib/pricing";
+import { ymGoal } from "@/lib/metrika";
 
 export default function PricingForm() {
   const [answers, setAnswers] = useState<PricingAnswers>({});
@@ -39,6 +40,7 @@ export default function PricingForm() {
         const data = await res.json().catch(() => ({}));
         throw new Error(data.error || "Не удалось отправить заявку.");
       }
+      ymGoal("lead_pricing");
       setDone(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (err) {
