@@ -33,7 +33,7 @@ export default function BlogIndex() {
               <Link
                 key={p.slug}
                 href={`/blog/${p.slug}`}
-                className="block rounded-3xl border border-pine/10 bg-paper-2 p-6 transition hover:-translate-y-0.5 hover:border-brass/40 hover:shadow-lg sm:p-7"
+                className="block rounded-3xl border border-brass/70 bg-paper-2 p-6 transition hover:-translate-y-0.5 hover:border-brass hover:shadow-lg sm:p-7"
               >
                 <h2 className="text-xl text-pine sm:text-2xl">{p.h1}</h2>
                 <p className="mt-2 text-ink-soft">{p.excerpt}</p>
