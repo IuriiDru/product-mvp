@@ -20,7 +20,7 @@ export default function SiteHeader() {
             href="/blog"
             className="hidden text-sm font-medium text-ink-soft transition hover:text-pine sm:block"
           >
-            Блог
+            Статьи
           </Link>
           <Link
             href="/audit"

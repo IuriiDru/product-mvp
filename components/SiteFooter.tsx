@@ -13,7 +13,7 @@ export default function SiteFooter() {
             Экспресс-аудит
           </Link>
           <Link href="/blog" className="transition hover:text-cream">
-            Блог
+            Статьи
           </Link>
           <a href="/privacy" className="transition hover:text-cream">
             Политика обработки ПДн
