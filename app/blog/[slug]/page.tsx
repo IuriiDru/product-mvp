@@ -95,6 +95,20 @@ export default async function ArticlePage({
               <ArticleBody blocks={post.blocks} />
             </div>
           </article>
+
+          <div className="mt-10 rounded-[14px] bg-pine p-8 text-cream">
+            <h2 className="text-2xl text-cream">Не уверены, всё ли в порядке с вашим учётом?</h2>
+            <p className="mt-2 text-cream/75">
+              Пройдите бесплатный экспресс-аудит — за пару минут покажем карту налоговых
+              рисков вашей компании прямо на экране.
+            </p>
+            <Link
+              href="/audit"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-brass-bright px-7 py-4 text-base font-semibold text-pine-deep transition hover:-translate-y-0.5 hover:shadow-lg"
+            >
+              Пройти экспресс-аудит <span aria-hidden>→</span>
+            </Link>
+          </div>
         </div>
       </main>
       <SiteFooter />
