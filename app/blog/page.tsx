@@ -21,8 +21,8 @@ export default function BlogIndex() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brass">Блог</p>
           <h1 className="mt-3 text-3xl sm:text-4xl">Бухгалтерия и налоги — понятным языком</h1>
           <p className="mt-4 max-w-2xl text-ink-soft">
-            Разбираем то, что важно собственнику бизнеса на ОСНО: как устроен учёт, где
-            возникают налоговые риски и на что смотреть, выбирая, кому доверить бухгалтерию.
+            Разбираем то, что важно собственнику бизнеса: как устроен учёт, где
+            возникают налоговые риски и на что ему обращать свое внимание.
           </p>
 
           <div className="mt-10 space-y-5">

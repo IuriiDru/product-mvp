@@ -3,12 +3,19 @@
 // **полужирный** и внутренние ссылки [текст](/audit) — их разбирает рендерер.
 
 export type Block =
+  | { type: "lead"; text: string }
   | { type: "h2"; text: string }
   | { type: "h3"; text: string }
   | { type: "p"; text: string }
   | { type: "ul"; items: string[] }
   | { type: "ol"; items: string[] }
+  | { type: "quote"; text: string }
   | { type: "callout"; text: string }
+  | {
+      type: "compare";
+      asset: { title: string; items: string[] };
+      cost: { title: string; items: string[] };
+    }
   | { type: "cta"; label: string; href: string };
 
 export interface Post {
