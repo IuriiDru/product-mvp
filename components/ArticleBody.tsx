@@ -47,7 +47,7 @@ export default function ArticleBody({ blocks }: { blocks: Block[] }) {
             );
           case "h3":
             return (
-              <h3 key={i} className="mt-7 mb-2 text-xl text-ink">
+              <h3 key={i} className="mt-8 mb-2 text-xl text-pine">
                 {b.text}
               </h3>
             );
